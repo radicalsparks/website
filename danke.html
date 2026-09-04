@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- GA4 – wird nur bei Cookie-Einwilligung geladen -->
+  <script>
+    function rsLoadGA4(){if(window._ga4loaded)return;window._ga4loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QZG197LGWV';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QZG197LGWV');}
+    function rsLoadMetaPixel(){if(window._fbPixelLoaded)return;window._fbPixelLoaded=true;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2214706905828469');fbq('track','PageView');}
+    if(localStorage.getItem('rs_cookie_consent')==='accepted'){rsLoadGA4();rsLoadMetaPixel();}
+  </script>
+  <title>Danke – Radical Sparks</title>
+  <meta name="robots" content="noindex,follow"/>
+  <link rel="canonical" href="https://www.radical-sparks.com/danke.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #1f3330;
+      --green-dark: #15241f;
+      --gold: #f2e63d;
+      --cream: #ede4d2;
+      --white: #ffffff;
+      --ink: #1f3330;
+      --text: #2a2a2a;
+      --muted: #666;
+      --radius: 4px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 17px; line-height: 1.72; }
+    h1, h2 { font-family: 'Fraunces', serif; font-weight: 500; line-height: 1.15; color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav { background: var(--green); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { font-weight: 700; font-size: 13px; letter-spacing: .25em; color: var(--gold); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(237,228,210,.85); font-size: 12px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      background: var(--green);
+      padding: 120px 32px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 500px;
+      line-height: 1;
+      color: rgba(242,230,61,0.04);
+      pointer-events: none;
+      user-select: none;
+      font-family: serif;
+    }
+    .check-circle {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: rgba(242,230,61,0.12);
+      border: 1.5px solid rgba(242,230,61,0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--gold);
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow-gold { color: var(--gold); }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--white);
+      max-width: 680px;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      color: rgba(237,228,210,.78);
+      font-size: 18px;
+      max-width: 520px;
+      margin: 0 auto 48px;
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+    /* dynamic messages */
+    .msg { position: relative; z-index: 1; }
+    .msg-waitlist, .msg-session { display: none; }
+    .msg-waitlist.active, .msg-session.active { display: block; }
+
+    /* STEPS */
+    .steps { background: var(--white); padding: 88px 32px; }
+    .steps-inner { max-width: 640px; margin: 0 auto; }
+    .steps h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 48px; }
+    .steps h2 em { color: var(--green); font-style: italic; }
+    .step-list { display: flex; flex-direction: column; gap: 0; }
+    .step { display: grid; grid-template-columns: 48px 1fr; gap: 24px; align-items: start; padding: 28px 0; border-top: 1px solid rgba(31,51,48,.1); }
+    .step:last-child { border-bottom: 1px solid rgba(31,51,48,.1); }
+    .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 400; color: var(--green); line-height: 1; margin-top: 2px; }
+    .step-text h3 { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .step-text p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    /* CTA */
+    .cta-section { background: var(--cream); padding: 88px 32px; text-align: center; }
+    .cta-section h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin-bottom: 16px; }
+    .cta-section h2 em { color: var(--green); font-style: italic; }
+    .cta-section p { color: var(--muted); font-size: 16px; max-width: 440px; margin: 0 auto 36px; line-height: 1.75; }
+    .btn-dark {
+      background: var(--green);
+      color: var(--gold);
+      border: none;
+      padding: 16px 32px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity .2s;
+    }
+    .btn-dark:hover { opacity: .85; }
+
+    /* FOOTER */
+    footer { background: var(--green-dark); padding: 44px 40px; }
+    .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; list-style: none; }
+    .footer-links a { color: rgba(237,228,210,.6); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .copy { color: rgba(237,228,210,.32); font-size: 13px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 80px 22px 72px; }
+      .steps, .cta-section { padding: 64px 22px; }
+      footer { padding: 40px 22px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Radical Sparks</a>
+  <ul class="nav-links">
+    <li><a href="kostenlose-gefühlssession.html">Kostenlose Gefühlssession</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">&#10227;</div>
+  <div class="check-circle">✓</div>
+  <span class="eyebrow eyebrow-gold">Du bist dabei</span>
+
+  <!-- Warteliste -->
+  <div class="msg msg-waitlist">
+    <h1>Schön, dass du dabei bist —<br><em>wir melden uns.</em></h1>
+    <p class="hero-sub">Du stehst jetzt auf der Warteliste. Schau in dein Postfach, bestätige deine E-Mail und sichere dir deinen Platz.</p>
+  </div>
+
+  <!-- Gefühlssession -->
+  <div class="msg msg-session">
+    <h1>Deine Gefühlssession<br><em>wartet auf dich.</em></h1>
+    <p class="hero-sub">Schau in dein Postfach — nach der Bestätigung bekommst du sofort den Zugang zu deiner kostenlosen Session.</p>
+  </div>
+
+  <!-- Fallback -->
+  <div class="msg msg-default">
+    <h1>Danke —<br><em>schön, dass du hier bist.</em></h1>
+    <p class="hero-sub">Schau in dein Postfach und bestätige deine E-Mail-Adresse. Danach geht es los.</p>
+  </div>
+</section>
+
+<!-- NÄCHSTE SCHRITTE -->
+<section class="steps">
+  <div class="steps-inner">
+    <h2>Was <em>jetzt passiert</em></h2>
+    <div class="step-list">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>E-Mail bestätigen</h3>
+          <p>Du bekommst gleich eine E-Mail von uns. Klicke auf den Bestätigungslink — das dauert nur eine Sekunde.</p>
+        </div>
+      </div>
+      <div class="step step-session-only">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3 class="step-h3-session" style="display:none;">Zugang erhalten</h3>
+          <h3 class="step-h3-waitlist">Platz gesichert</h3>
+          <p class="step-p-session" style="display:none;">Nach der Bestätigung bekommst du sofort den Link zu deiner geführten Gefühlssession. Kopfhörer empfohlen.</p>
+          <p class="step-p-waitlist">Du bist dabei. Sobald Radical Sparks startet, bist du die Erste, die es erfährt.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Fühlen lernen</h3>
+          <p>Radical Sparks ist dein tägliches Training — körperbasiert, alltagstauglich, neurowissenschaftlich fundiert. Willkommen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Neugierig, was<br><em>Radical Sparks</em> ist?</h2>
+  <p>Erfahre mehr über den Ansatz, die Methode und das Team dahinter.</p>
+  <a href="index.html" class="btn-dark">Zur Startseite →</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a class="nav-logo" href="index.html">Radical Sparks</a>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="kostenlose-gefühlssession.html">Kostenlose Gefühlssession</a></li>
+    </ul>
+    <div class="copy">© 2026 Radical Sparks</div>
+  </div>
+</footer>
+
+<script>
+  // Zeige je nach URL-Parameter den richtigen Text
+  const params = new URLSearchParams(window.location.search);
+  const typ = params.get('typ');
+  if (typ === 'session') {
+    document.querySelector('.msg-session').classList.add('active');
+    document.querySelectorAll('.step-h3-session, .step-p-session').forEach(el => el.style.display = 'block');
+    document.querySelectorAll('.step-h3-waitlist, .step-p-waitlist').forEach(el => el.style.display = 'none');
+  } else if (typ === 'warteliste') {
+    document.querySelector('.msg-waitlist').classList.add('active');
+  } else {
+    document.querySelector('.msg-default').style.display = 'block';
+  }
+</script>
+
+
+<!-- Cookie-Banner (DSGVO) -->
+<div id="rs-cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="rs-cb-inner">
+    <p>Wir nutzen <strong>Google Analytics</strong> und den <strong>Meta-Pixel (Facebook)</strong>, um zu verstehen, wie Besucher unsere Website nutzen und um Werbung zu messen. Einwilligung jederzeit widerrufbar. <a href="datenschutz.html">Datenschutzerklärung</a></p>
+    <div class="rs-cb-btns">
+      <button class="rs-cb-decline" onclick="rsDeclineCookies()">Nur notwendige</button>
+      <button class="rs-cb-accept" onclick="rsAcceptCookies()">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<style>
+  #rs-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1f3330;color:#ede4d2;padding:20px 32px;box-shadow:0 -4px 24px rgba(0,0,0,.22);}
+  .rs-cb-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  #rs-cookie-banner p{flex:1;min-width:220px;font-size:14px;line-height:1.6;}
+  #rs-cookie-banner a{color:#f2e63d;}
+  .rs-cb-btns{display:flex;gap:12px;flex-shrink:0;}
+  .rs-cb-accept{background:#f2e63d;color:#000;border:none;padding:10px 24px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+  .rs-cb-decline{background:transparent;color:rgba(237,228,210,.7);border:1px solid rgba(237,228,210,.3);padding:10px 24px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+  .rs-cb-decline:hover{border-color:rgba(237,228,210,.7);color:#ede4d2;}
+  @media(max-width:600px){#rs-cookie-banner{padding:16px 20px;}.rs-cb-inner{flex-direction:column;align-items:flex-start;gap:14px;}.rs-cb-btns{width:100%;}.rs-cb-accept,.rs-cb-decline{flex:1;text-align:center;}}
+</style>
+<script>
+  (function(){if(!localStorage.getItem('rs_cookie_consent')){document.getElementById('rs-cookie-banner').style.display='block';}})();
+  function rsAcceptCookies(){localStorage.setItem('rs_cookie_consent','accepted');document.getElementById('rs-cookie-banner').style.display='none';if(typeof rsLoadGA4==='function'){rsLoadGA4();}if(typeof rsLoadMetaPixel==='function'){rsLoadMetaPixel();}}
+  function rsDeclineCookies(){localStorage.setItem('rs_cookie_consent','declined');document.getElementById('rs-cookie-banner').style.display='none';}
+</script>
+</body>
+</html>

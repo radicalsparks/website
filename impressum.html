@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- GA4 – wird nur bei Cookie-Einwilligung geladen -->
+<script>
+  function rsLoadGA4(){if(window._ga4loaded)return;window._ga4loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QZG197LGWV';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QZG197LGWV');}
+  function rsLoadMetaPixel(){if(window._fbPixelLoaded)return;window._fbPixelLoaded=true;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2214706905828469');fbq('track','PageView');}
+  if(localStorage.getItem('rs_cookie_consent')==='accepted'){rsLoadGA4();rsLoadMetaPixel();}
+</script>
+<title>Impressum – Radical Sparks</title>
+<meta name="description" content="Impressum von Radical Sparks gemäß § 5 TMG."/>
+<link rel="canonical" href="https://www.radical-sparks.com/impressum.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #16231d;
+  --surface: #283b33;
+  --surface-2: #32473e;
+  --line: rgba(245,241,228,0.14);
+  --yellow: #ffde59;
+  --orange: #ff914d;
+  --text: #f5f1e4;
+  --text-mid: rgba(245,241,228,0.86);
+  --text-dim: rgba(245,241,228,0.66);
+  --radius: 6px;
+  --body: 'Poppins', sans-serif;
+  --maxw: 1180px;
+}
+* { box-sizing: border-box; }
+body{margin:0;font-family:var(--body);background:var(--bg);color:var(--text-mid);font-size:17px;line-height:1.72;}
+h1,h2,h3{font-family:var(--body);font-weight:700;line-height:1.18;color:var(--text);margin:0 0 18px;}
+a{color:inherit;}
+
+/* header */
+header.site{position:sticky;top:0;z-index:500;background:rgba(22,35,29,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:var(--maxw);margin:0 auto;gap:24px;}
+.nav-logo img{height:44px;width:44px;display:block;border-radius:8px;}
+.nav-links{list-style:none;display:flex;align-items:center;gap:30px;margin:0;padding:0;}
+.nav-links > li{position:relative;}
+.nav-links a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--text-mid);}
+.nav-links > li > a:hover, .nav-links > li.has-dd:hover > a{color:var(--yellow);}
+.nav-links .dd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;user-select:none;}
+.nav-links .dd-toggle::after{content:"▾";font-size:10px;color:var(--text-dim);}
+.dropdown{list-style:none;margin:0;padding:8px;position:absolute;top:100%;left:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;min-width:240px;box-shadow:0 12px 28px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s ease, transform .15s ease, visibility .15s;}
+.nav-links li.has-dd:hover .dropdown, .nav-links li.has-dd:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown li a{display:block;padding:10px 12px;border-radius:5px;font-size:14px;}
+.dropdown li a:hover{background:var(--surface-2);color:var(--yellow);}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.nav-countdown{font-size:12.5px;color:var(--orange);font-weight:600;white-space:nowrap;}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.nav-toggle span{width:24px;height:2px;background:var(--text);display:block;}
+@media (max-width: 900px) {
+  .nav-links{position:fixed;top:66px;right:0;left:0;height:calc(100vh - 66px);background:var(--bg);flex-direction:column;padding:32px 28px;gap:22px;align-items:flex-start;display:none;overflow-y:auto;}
+  .nav-links.open{display:flex;}
+  .nav-links > li{width:100%;}
+  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:none;padding:10px 0 0 14px;display:none;}
+  .nav-links li.has-dd.open-dd .dropdown{display:block;}
+  .dropdown li a{padding:8px 0;font-size:15px;color:var(--text-dim);}
+  .nav-toggle{display:flex;}
+  .nav-cta .btn-primary{display:none;}
+  .nav-countdown{display:none;}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.08em;padding:17px 34px;border-radius:var(--radius);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s ease, color .15s ease, border-color .15s ease;}
+.btn-primary{background:var(--yellow);color:#16231d;}
+.btn-primary:hover{background:var(--orange);color:#16231d;}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
+
+/* content */
+.wrap{max-width:760px;margin:0 auto;padding:88px 28px 96px;}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:16px;}
+h1{font-size:clamp(34px, 5.2vw, 52px);margin-bottom:18px;}
+h1 span{color:var(--yellow);}
+.intro{max-width:560px;color:var(--text-dim);font-size:18px;line-height:1.75;margin-bottom:40px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 30px;}
+.row{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line);}
+.row:first-child{border-top:none;}
+.label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);padding-top:4px;}
+.value p{margin:0 0 6px;color:var(--text-mid);}
+.value p:last-child{margin-bottom:0;}
+.value a{color:var(--yellow);}
+.mono{font-variant-numeric:tabular-nums;}
+
+/* footer */
+footer.site{background:var(--surface);border-top:1px solid var(--line);padding:56px 0 28px;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap;margin-bottom:40px;}
+.footer-logo img{height:28px;width:28px;border-radius:6px;margin-bottom:12px;}
+.footer-tagline{font-size:14px;color:var(--text-dim);}
+.footer-links{list-style:none;display:flex;flex-wrap:wrap;gap:12px 28px;margin:0;padding:0;}
+.footer-links a{text-decoration:none;font-size:14.5px;color:var(--text-mid);}
+.footer-links a:hover{color:var(--yellow);}
+.footer-bottom{font-size:13px;color:var(--text-dim);border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-social{display:flex;gap:14px;margin-top:14px;}
+.footer-social a{color:var(--text-dim);display:inline-flex;transition:color .15s ease;}
+.footer-social a:hover{color:var(--yellow);}
+.footer-social svg{width:20px;height:20px;fill:currentColor;display:block;}
+.footer-disclaimer{border-top:1px solid var(--line);padding:22px 0;margin-bottom:22px;font-size:13px;color:var(--text-dim);line-height:1.65;}
+.footer-disclaimer strong{display:block;margin-bottom:6px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-mid);}
+.footer-disclaimer a{color:var(--yellow);}
+footer.site .wrap{padding:0 28px;max-width:var(--maxw);}
+
+/* cookie banner */
+#rs-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--surface);color:var(--text);padding:20px 32px;box-shadow:0 -4px 24px rgba(0,0,0,.3);border-top:1px solid var(--line);}
+.rs-cb-inner{display:flex;align-items:center;gap:20px;flex-wrap:wrap;max-width:960px;margin:0 auto;}
+#rs-cookie-banner p{flex:1;min-width:220px;font-size:14px;line-height:1.6;margin:0;color:var(--text-dim);}
+#rs-cookie-banner a{color:var(--yellow);}
+.rs-cb-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.rs-cb-accept,.rs-cb-decline{border-radius:4px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid var(--yellow);font-family:var(--body);}
+.rs-cb-accept{background:var(--yellow);color:#16231d;}
+.rs-cb-decline{background:transparent;color:var(--text-dim);border-color:var(--line);}
+@media(max-width:600px){#rs-cookie-banner{padding:16px 20px;}.rs-cb-inner{flex-direction:column;align-items:flex-start;}.rs-cb-btns{width:100%;}.rs-cb-accept,.rs-cb-decline{flex:1;text-align:center;}}
+
+@media (max-width:680px){
+  .wrap{padding:56px 22px 72px;}
+  .card{padding:6px 22px;}
+  .row{grid-template-columns:1fr;gap:6px;}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="nav-logo"><img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="has-dd" id="ddProdukte">
+        <span class="dd-toggle" onclick="toggleDropdown(event)">Produkte</span>
+        <ul class="dropdown">
+          <li><a href="index.html" onclick="closeMenu()">Online Kurs Emotionstraining</a></li>
+          <li><a href="kostenloses-gefühlstraining.html" onclick="closeMenu()">Kostenloses Gefühlstraining</a></li>
+        </ul>
+      </li>
+      <li><a href="ueber-uns.html" onclick="closeMenu()">Über uns</a></li>
+      <li><a href="podcast.html" onclick="closeMenu()">Podcast</a></li>
+    </ul>
+    <div class="nav-cta">
+      <span class="nav-countdown" id="navCountdown"></span>
+      <a href="https://buy.stripe.com/cNibJ14n86EKgsu46Zb3q00" class="btn btn-primary" style="padding:11px 22px;">Platz sichern</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <span class="eyebrow">Impressum</span>
+  <h1>Rechtliche <span>Angaben</span></h1>
+  <p class="intro">Alle Informationen gemäß den gesetzlichen Anforderungen für Radical Sparks auf einen Blick.</p>
+
+  <section class="card">
+    <div class="row">
+      <div class="label">Marke</div>
+      <div class="value">
+        <p><strong>Radical Sparks</strong></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">Unternehmen</div>
+      <div class="value">
+        <p>AB-Education UG (haftungsbeschränkt)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">Anschrift</div>
+      <div class="value">
+        <p>Schirmerstraße 71</p>
+        <p class="mono">40211 Düsseldorf</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">Kontakt</div>
+      <div class="value">
+        <p>E-Mail: <a href="mailto:hallo@radicalsparks.de">hallo@radicalsparks.de</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">Vertreten durch</div>
+      <div class="value">
+        <p>Alexandra Böhmer</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Streitschlichtung</div>
+      <div class="value">
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></p>
+        <p>Unsere E-Mail-Adresse finden Sie hier im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Verbraucher haben die Möglichkeit, diese Plattform für die Beilegung ihrer Streitigkeiten zu nutzen.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Hinweis gemäß §36 VSBG</div>
+      <div class="value">
+        <p>Wir werden nicht an alternativen Streitschlichtungsverfahren im Sinne des §36 VSBG teilnehmen. Die Nutzung einer alternativen Schlichtungsstelle stellt keine zwingende Voraussetzung für das Anrufen zuständiger ordentlicher Gerichte dar.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Haftung für Inhalte</div>
+      <div class="value">
+        <p>Als Diensteanbieter sind wir gemäß §7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+        <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Haftung für Links</div>
+      <div class="value">
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+        <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Urheberrecht</div>
+      <div class="value">
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+        <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/>
+        <div class="footer-tagline">Das Fitnessstudio für emotionale Kapazität.</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/radicalsparks/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153.5.5.888 1.11 1.153 1.772.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg></a>
+          <a href="https://www.facebook.com/radicalsparks.official/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/></svg></a>
+          <a href="https://www.youtube.com/@RadicalSparks" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3.02 3.02 0 002.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Online Kurs Emotionstraining</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="kostenloses-gefühlstraining.html">Kostenloses Gefühlstraining</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+    <div class="footer-disclaimer">
+      <strong>Disclaimer</strong>
+      <p>Die bereitgestellten Inhalte sind ausschließlich zu Informations- und Bildungszwecken und ersetzen keine therapeutische oder medizinische Beratung. Bei medizinischen oder psychischen Problemen solltest du stets professionelle Hilfe in Anspruch nehmen. <a href="disclaimer.html">Mehr Informationen hier.</a></p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Radical Sparks. Alle Rechte vorbehalten.</span>
+      <span>hello@radical-sparks.com</span>
+    </div>
+  </div>
+</footer>
+
+<div id="rs-cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="rs-cb-inner">
+    <p>Wir nutzen <strong>Google Analytics</strong> und den <strong>Meta-Pixel (Facebook)</strong>, um zu verstehen, wie Besucher unsere Website nutzen und um Werbung zu messen. Einwilligung jederzeit widerrufbar. <a href="datenschutz.html">Datenschutzerklärung</a></p>
+    <div class="rs-cb-btns">
+      <button class="rs-cb-decline" onclick="rsDeclineCookies()">Nur notwendige</button>
+      <button class="rs-cb-accept" onclick="rsAcceptCookies()">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('navToggle').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('navToggle').classList.remove('open');
+  }
+  function toggleDropdown(e) {
+    if (window.innerWidth > 900) return;
+    e.stopPropagation();
+    document.getElementById('ddProdukte').classList.toggle('open-dd');
+  }
+  document.addEventListener('click', function(e){
+    var dd = document.getElementById('ddProdukte');
+    if (dd && dd.classList.contains('open-dd') && !dd.contains(e.target)) dd.classList.remove('open-dd');
+  });
+  (function(){if(!localStorage.getItem('rs_cookie_consent')){document.getElementById('rs-cookie-banner').style.display='block';}})();
+  function rsAcceptCookies(){localStorage.setItem('rs_cookie_consent','accepted');document.getElementById('rs-cookie-banner').style.display='none';if(typeof rsLoadGA4==='function'){rsLoadGA4();}if(typeof rsLoadMetaPixel==='function'){rsLoadMetaPixel();}}
+  function rsDeclineCookies(){localStorage.setItem('rs_cookie_consent','declined');document.getElementById('rs-cookie-banner').style.display='none';}
+</script>
+
+</body>
+</html>

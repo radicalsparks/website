@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- GA4 – wird nur bei Cookie-Einwilligung geladen -->
+  <script>
+    function rsLoadGA4(){if(window._ga4loaded)return;window._ga4loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QZG197LGWV';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QZG197LGWV');}
+    function rsLoadMetaPixel(){if(window._fbPixelLoaded)return;window._fbPixelLoaded=true;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2214706905828469');fbq('track','PageView');}
+    if(localStorage.getItem('rs_cookie_consent')==='accepted'){rsLoadGA4();rsLoadMetaPixel();}
+  </script>
+  <title>Dein Gefühlstraining – Radical Sparks</title>
+  <meta name="robots" content="noindex,follow"/>
+  <link rel="canonical" href="https://www.radical-sparks.com/session-zugang.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #1f3330;
+      --green-dark: #15241f;
+      --gold: #f2e63d;
+      --cream: #ede4d2;
+      --white: #ffffff;
+      --ink: #1f3330;
+      --text: #2a2a2a;
+      --muted: #666;
+      --radius: 4px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 17px; line-height: 1.72; }
+    h1, h2 { font-family: 'Fraunces', serif; font-weight: 500; line-height: 1.15; color: var(--ink); }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav { background: var(--green); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { font-weight: 700; font-size: 13px; letter-spacing: .25em; color: var(--gold); text-transform: uppercase; }
+
+    /* HERO */
+    .hero { background: var(--green); padding: 100px 32px 80px; text-align: center; }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; display: block; margin-bottom: 20px; }
+    .eyebrow-gold { color: var(--gold); }
+    .eyebrow-muted { color: var(--muted); }
+    .hero h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); color: var(--white); max-width: 640px; margin: 0 auto 20px; }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero-sub { color: rgba(237,228,210,.78); font-size: 17px; max-width: 480px; margin: 0 auto; line-height: 1.75; }
+
+    /* PLAYER SECTION */
+    .player-section { padding: 72px 32px; }
+    .player-card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 48px 44px;
+    }
+    .player-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .player-title {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+
+    /* Custom Audio Player */
+    .audio-wrap { margin-bottom: 36px; }
+    audio {
+      width: 100%;
+      outline: none;
+      border-radius: var(--radius);
+      accent-color: var(--green);
+    }
+    audio::-webkit-media-controls-panel { background: var(--cream); }
+
+    .hint-box {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .hint-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+    .hint-text { font-size: 14px; color: var(--text); line-height: 1.65; }
+    .hint-text strong { color: var(--ink); }
+
+    .divider { border: none; border-top: 1px solid rgba(31,51,48,.1); margin: 36px 0; }
+
+    .download-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: var(--gold);
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      transition: opacity .2s;
+    }
+    .btn-download:hover { opacity: .85; }
+    .btn-download svg { width: 16px; height: 16px; fill: var(--gold); flex-shrink: 0; }
+    .download-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+    /* WHAT NEXT */
+    .next { padding: 0 32px 80px; }
+    .next-inner { max-width: 680px; margin: 0 auto; }
+    .next-inner h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin-bottom: 32px; }
+    .next-inner h2 em { color: var(--green); font-style: italic; }
+    .tip-list { display: flex; flex-direction: column; gap: 0; }
+    .tip { display: flex; gap: 18px; align-items: flex-start; padding: 22px 0; border-top: 1px solid rgba(31,51,48,.1); }
+    .tip:last-child { border-bottom: 1px solid rgba(31,51,48,.1); }
+    .tip-num { font-family: 'Fraunces', serif; font-size: 28px; color: var(--green); line-height: 1; flex-shrink: 0; margin-top: 2px; }
+    .tip-text h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+    .tip-text p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+    /* CTA */
+    .cta { background: var(--green); padding: 88px 32px; text-align: center; }
+    .cta h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--white); margin-bottom: 16px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .cta h2 em { color: var(--gold); font-style: italic; }
+    .cta p { color: rgba(237,228,210,.72); font-size: 16px; max-width: 420px; margin: 0 auto 36px; line-height: 1.75; }
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--green);
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      transition: opacity .2s;
+    }
+    .btn-gold:hover { opacity: .88; }
+
+    /* FOOTER */
+    footer { background: var(--green-dark); padding: 44px 40px; }
+    .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; list-style: none; }
+    .footer-links a { color: rgba(237,228,210,.6); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .copy { color: rgba(237,228,210,.32); font-size: 13px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 72px 22px 64px; }
+      .player-section, .next { padding-left: 22px; padding-right: 22px; }
+      .player-card { padding: 32px 24px; }
+      footer { padding: 40px 22px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Radical Sparks</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="eyebrow eyebrow-gold">Kostenloses Gefühlstraining</span>
+  <h1>Dein geführtes<br><em>Gefühlstraining</em> ist bereit.</h1>
+  <p class="hero-sub">10 Minuten. Eine Erfahrung. Dein erster Schritt darin, wirklich zu fühlen.</p>
+</section>
+
+<!-- PLAYER -->
+<section class="player-section">
+  <div class="player-card">
+    <span class="player-label">Jetzt anhören</span>
+    <p class="player-title">Radical Sparks — Kostenloses geführtes Gefühlstraining</p>
+
+    <div class="audio-wrap">
+      <audio controls preload="metadata">
+        <source src="session.mp3" type="audio/mpeg" />
+        Dein Browser unterstützt kein Audio. Bitte lade die Datei unten herunter.
+      </audio>
+    </div>
+
+    <div class="hint-box">
+      <span class="hint-icon">🎧</span>
+      <p class="hint-text"><strong>Kopfhörer empfohlen.</strong> Suche dir einen ruhigen Ort, setze oder lege dich bequem hin und gib dir diese 10 Minuten wirklich für dich.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <span class="download-label">Offline hören</span>
+    <a class="btn-download" href="session.mp3" download="Radical Sparks - Kostenloses Gefühlstraining.mp3">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/></svg>
+      Session herunterladen
+    </a>
+    <p class="download-note">MP3 · 16 MB · Auf deinem Gerät speichern und jederzeit offline hören</p>
+  </div>
+</section>
+
+<!-- TIPPS -->
+<section class="next">
+  <div class="next-inner">
+    <h2>So holst du das <em>Meiste heraus</em></h2>
+    <div class="tip-list">
+      <div class="tip">
+        <div class="tip-num">1</div>
+        <div class="tip-text">
+          <h3>Raum schaffen</h3>
+          <p>10 Minuten, in denen du nicht unterbrochen wirst. Handy auf lautlos. Das ist deine Zeit.</p>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">2</div>
+        <div class="tip-text">
+          <h3>Nichts verstehen müssen</h3>
+          <p>Du musst nichts analysieren oder richtig machen. Lass einfach zu, was kommt — das ist die Übung.</p>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">3</div>
+        <div class="tip-text">
+          <h3>Danach kurz innehalten</h3>
+          <p>Nimm dir nach der Session ein, zwei Minuten. Bleib einfach sitzen und spür nach, was sich verändert hat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Bereit für<br><em>mehr davon?</em></h2>
+  <p>Radical Sparks bringt dieses Training in deinen Alltag — täglich, körperbasiert, alltagstauglich.</p>
+  <a href="index.html" class="btn-gold">Auf die Warteliste →</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a class="nav-logo" href="index.html">Radical Sparks</a>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+    </ul>
+    <div class="copy">© 2026 Radical Sparks</div>
+  </div>
+</footer>
+
+<script>
+(async function() {
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  if (!ref) return;
+
+  try {
+    const email = atob(ref);
+    if (!email.includes('@')) return;
+
+    // URL sauber halten — ref aus der Adressleiste entfernen
+    window.history.replaceState({}, document.title, window.location.pathname);
+
+    // Folge-E-Mail mit Zugangslink senden (Template 18)
+    await fetch('/.netlify/functions/brevo', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        action: 'sendEmail',
+        email: email,
+        templateId: 18
+      })
+    });
+  } catch(e) {
+    // Stiller Fehler — Nutzer sieht die Seite trotzdem
+  }
+})();
+</script>
+
+<!-- Cookie-Banner (DSGVO) -->
+<div id="rs-cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="rs-cb-inner">
+    <p>Wir nutzen <strong>Google Analytics</strong> und den <strong>Meta-Pixel (Facebook)</strong>, um zu verstehen, wie Besucher unsere Website nutzen und um Werbung zu messen. Einwilligung jederzeit widerrufbar. <a href="datenschutz.html">Datenschutzerklärung</a></p>
+    <div class="rs-cb-btns">
+      <button class="rs-cb-decline" onclick="rsDeclineCookies()">Nur notwendige</button>
+      <button class="rs-cb-accept" onclick="rsAcceptCookies()">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<style>
+  #rs-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1f3330;color:#ede4d2;padding:20px 32px;box-shadow:0 -4px 24px rgba(0,0,0,.22);}
+  .rs-cb-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  #rs-cookie-banner p{flex:1;min-width:220px;font-size:14px;line-height:1.6;}
+  #rs-cookie-banner a{color:#f2e63d;}
+  .rs-cb-btns{display:flex;gap:12px;flex-shrink:0;}
+  .rs-cb-accept{background:#f2e63d;color:#000;border:none;padding:10px 24px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+  .rs-cb-decline{background:transparent;color:rgba(237,228,210,.7);border:1px solid rgba(237,228,210,.3);padding:10px 24px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+  .rs-cb-decline:hover{border-color:rgba(237,228,210,.7);color:#ede4d2;}
+  @media(max-width:600px){#rs-cookie-banner{padding:16px 20px;}.rs-cb-inner{flex-direction:column;align-items:flex-start;gap:14px;}.rs-cb-btns{width:100%;}.rs-cb-accept,.rs-cb-decline{flex:1;text-align:center;}}
+</style>
+<script>
+  (function(){if(!localStorage.getItem('rs_cookie_consent')){document.getElementById('rs-cookie-banner').style.display='block';}})();
+  function rsAcceptCookies(){localStorage.setItem('rs_cookie_consent','accepted');document.getElementById('rs-cookie-banner').style.display='none';if(typeof rsLoadGA4==='function'){rsLoadGA4();}if(typeof rsLoadMetaPixel==='function'){rsLoadMetaPixel();}}
+  function rsDeclineCookies(){localStorage.setItem('rs_cookie_consent','declined');document.getElementById('rs-cookie-banner').style.display='none';}
+</script>
+</body>
+</html>

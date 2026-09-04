@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- GA4 – wird nur bei Cookie-Einwilligung geladen -->
+  <script>
+    function rsLoadGA4(){if(window._ga4loaded)return;window._ga4loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QZG197LGWV';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QZG197LGWV');}
+    function rsLoadMetaPixel(){if(window._fbPixelLoaded)return;window._fbPixelLoaded=true;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2214706905828469');fbq('track','PageView');}
+    if(localStorage.getItem('rs_cookie_consent')==='accepted'){rsLoadGA4();rsLoadMetaPixel();}
+  </script>
+  <title>Anmeldung bestätigen – Radical Sparks</title>
+  <meta name="robots" content="noindex,follow"/>
+  <link rel="canonical" href="https://www.radical-sparks.com/confirm.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet" />
+  <style>
+    :root { --green:#1f3330; --green-dark:#15241f; --gold:#f2e63d; --cream:#ede4d2; --white:#ffffff; --muted:#666; --radius:4px; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:#2a2a2a;font-size:17px;line-height:1.72;min-height:100vh;display:flex;flex-direction:column;}
+    nav{background:var(--green);padding:0 40px;display:flex;align-items:center;height:72px;}
+    .nav-logo{font-weight:700;font-size:13px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;text-decoration:none;}
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;}
+    .card{background:var(--white);border-radius:var(--radius);padding:56px 48px;max-width:520px;width:100%;text-align:center;}
+    .icon{font-size:48px;margin-bottom:24px;display:block;}
+    h1{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:var(--green);line-height:1.2;margin-bottom:16px;}
+    h1 em{font-style:italic;}
+    p{color:var(--muted);font-size:16px;line-height:1.75;margin-bottom:24px;}
+    .btn{display:inline-block;background:var(--green);color:var(--gold);padding:15px 32px;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:opacity .2s;}
+    .btn:hover{opacity:.85;}
+    .btn-gold{background:var(--gold);color:var(--green);}
+    footer{background:var(--green-dark);padding:28px 40px;text-align:center;}
+    footer p{color:rgba(237,228,210,.35);font-size:13px;}
+    @media(max-width:600px){.card{padding:36px 24px;}nav{padding:0 20px;}}
+  </style>
+</head>
+<body>
+<nav><a class="nav-logo" href="index.html">Radical Sparks</a></nav>
+
+<main>
+  <!-- Ladezustand -->
+  <div id="state-loading" class="card">
+    <span class="icon">⏳</span>
+    <h1>Einen Moment …</h1>
+    <p>Deine Anmeldung wird gerade bestätigt.</p>
+  </div>
+
+  <!-- Erfolg Warteliste -->
+  <div id="state-waitlist" class="card" style="display:none;">
+    <span class="icon">✓</span>
+    <h1>Du bist dabei —<br><em>willkommen!</em></h1>
+    <p>Deine E-Mail-Adresse ist bestätigt. Du stehst jetzt auf der Warteliste und erfährst als Erste, wann Radical Sparks startet.</p>
+    <a href="index.html" class="btn">Zur Startseite →</a>
+  </div>
+
+  <!-- Erfolg Gefühlstraining -->
+  <div id="state-session" class="card" style="display:none;">
+    <span class="icon">🎧</span>
+    <h1>Bestätigt —<br><em>dein Training wartet.</em></h1>
+    <p>Deine E-Mail-Adresse ist bestätigt. Du wirst jetzt zum Gefühlstraining weitergeleitet …</p>
+  </div>
+
+  <!-- Erfolg Webinar -->
+  <div id="state-webinar" class="card" style="display:none;">
+    <span class="icon">✓</span>
+    <h1>Du bist dabei —<br><em>bis zum 22.09.!</em></h1>
+    <p>Deine Anmeldung zum Webinar „Nervensystem-Training" ist bestätigt. Schau in dein Postfach: Dort findest du alle Infos zum Ablauf, und kurz vor dem Termin den Zoom-Zugangslink.</p>
+    <a href="index.html" class="btn">Zur Startseite →</a>
+  </div>
+
+  <!-- Fehler -->
+  <div id="state-error" class="card" style="display:none;">
+    <span class="icon">✗</span>
+    <h1>Etwas ist <em>schiefgelaufen.</em></h1>
+    <p>Der Bestätigungslink ist ungültig oder abgelaufen. Bitte trag dich nochmal ein.</p>
+    <a href="index.html" class="btn">Zurück zur Startseite</a>
+  </div>
+</main>
+
+<footer><p>© 2026 Radical Sparks · AB-Education UG · Düsseldorf</p></footer>
+
+<script>
+function show(id) {
+  ['state-loading','state-waitlist','state-session','state-webinar','state-error'].forEach(function(s) {
+    document.getElementById(s).style.display = s === id ? 'block' : 'none';
+  });
+}
+
+// Brevo-Template "RS – Webinar Willkommen (nach DOI)" (emails/1-bestaetigung.html)
+const RS_WEBINAR_WELCOME_TEMPLATE_ID = 20;
+
+(async function() {
+  const params = new URLSearchParams(window.location.search);
+  const eEnc = params.get('e');
+  const listId = parseInt(params.get('l'), 10);
+  const flow = params.get('s'); // '1' = Gefühlstraining, '2' = Webinar, sonst Warteliste
+
+  if (!eEnc || !listId) { show('state-error'); return; }
+
+  let email;
+  try { email = atob(eEnc); } catch(e) { show('state-error'); return; }
+  if (!email.includes('@')) { show('state-error'); return; }
+
+  try {
+    // Kontakt in Brevo-Liste eintragen
+    const resp = await fetch('/.netlify/functions/brevo', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ action: 'addContact', email: email, listId: listId })
+    });
+
+    if (!resp.ok) throw new Error(resp.status);
+
+    if (flow === '1') {
+      // Zugangs-E-Mail senden (Template 18)
+      await fetch('/.netlify/functions/brevo', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ action: 'sendEmail', email: email, templateId: 18 })
+      });
+
+      show('state-session');
+      setTimeout(function() {
+        window.location.href = 'session-zugang.html';
+      }, 2000);
+    } else if (flow === '2') {
+      // Webinar-Willkommensmail senden ("Du bist dabei")
+      await fetch('/.netlify/functions/brevo', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ action: 'sendEmail', email: email, templateId: RS_WEBINAR_WELCOME_TEMPLATE_ID })
+      });
+
+      show('state-webinar');
+      // Meta-Pixel Conversion-Event, nur wenn der Pixel geladen ist (= Cookie-Einwilligung erteilt)
+      if (typeof fbq === 'function') {
+        fbq('track', 'CompleteRegistration', { content_name: 'Webinar Nervensystem-Training' });
+      }
+    } else {
+      show('state-waitlist');
+    }
+  } catch(err) {
+    show('state-error');
+  }
+})();
+</script>
+
+<!-- Cookie-Banner (DSGVO) -->
+<div id="rs-cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="rs-cb-inner">
+    <p>Wir nutzen <strong>Google Analytics</strong> und den <strong>Meta-Pixel (Facebook)</strong>, um zu verstehen, wie Besucher unsere Website nutzen und um Werbung zu messen. Einwilligung jederzeit widerrufbar. <a href="datenschutz.html">Datenschutzerklärung</a></p>
+    <div class="rs-cb-btns">
+      <button class="rs-cb-decline" onclick="rsDeclineCookies()">Nur notwendige</button>
+      <button class="rs-cb-accept" onclick="rsAcceptCookies()">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<style>
+  #rs-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1f3330;color:#ede4d2;padding:20px 32px;box-shadow:0 -4px 24px rgba(0,0,0,.22);}
+  .rs-cb-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  #rs-cookie-banner p{flex:1;min-width:220px;font-size:14px;line-height:1.6;}
+  #rs-cookie-banner a{color:#f2e63d;}
+  .rs-cb-btns{display:flex;gap:12px;flex-shrink:0;}
+  .rs-cb-accept{background:#f2e63d;color:#000;border:none;padding:10px 24px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+  .rs-cb-decline{background:transparent;color:rgba(237,228,210,.7);border:1px solid rgba(237,228,210,.3);padding:10px 24px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+  .rs-cb-decline:hover{border-color:rgba(237,228,210,.7);color:#ede4d2;}
+  @media(max-width:600px){#rs-cookie-banner{padding:16px 20px;}.rs-cb-inner{flex-direction:column;align-items:flex-start;gap:14px;}.rs-cb-btns{width:100%;}.rs-cb-accept,.rs-cb-decline{flex:1;text-align:center;}}
+</style>
+<script>
+  (function(){if(!localStorage.getItem('rs_cookie_consent')){document.getElementById('rs-cookie-banner').style.display='block';}})();
+  function rsAcceptCookies(){localStorage.setItem('rs_cookie_consent','accepted');document.getElementById('rs-cookie-banner').style.display='none';if(typeof rsLoadGA4==='function'){rsLoadGA4();}if(typeof rsLoadMetaPixel==='function'){rsLoadMetaPixel();}}
+  function rsDeclineCookies(){localStorage.setItem('rs_cookie_consent','declined');document.getElementById('rs-cookie-banner').style.display='none';}
+</script>
+</body>
+</html>
