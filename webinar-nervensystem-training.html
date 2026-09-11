@@ -130,13 +130,13 @@ header.site { position: sticky; top: 0; z-index: 500; background: rgba(22,35,29,
 .hero-glow { position: absolute; inset: -14% -18%; z-index: 0; background: radial-gradient(circle at 62% 38%, rgba(255,222,89,.24), transparent 62%); pointer-events: none; }
 .hero-photo { position: relative; z-index: 1; border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
 .hero-photo img { width: 100%; display: block; }
-.video-facade { position: relative; width: 100%; aspect-ratio: 16/9; cursor: pointer; border: 0; padding: 0; display: block; background: var(--surface); }
+.video-facade { position: relative; width: 100%; aspect-ratio: 1496/1064; cursor: pointer; border: 0; padding: 0; display: block; background: var(--surface); }
 .video-facade img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .video-facade .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 68px; height: 68px; border-radius: 50%; background: rgba(22,35,29,.72); border: 2px solid var(--yellow); display: flex; align-items: center; justify-content: center; transition: background .15s ease, transform .15s ease; }
 .video-facade:hover .play-btn { background: var(--yellow); }
 .video-facade .play-btn svg { width: 22px; height: 22px; fill: var(--yellow); margin-left: 3px; }
 .video-facade:hover .play-btn svg { fill: var(--bg); }
-.hero-photo iframe { width: 100%; height: 100%; aspect-ratio: 16/9; display: block; border: 0; }
+.hero-photo video { width: 100%; height: 100%; aspect-ratio: 1496/1064; display: block; border: 0; object-fit: cover; background: #000; }
 .hero-badge { position: absolute; z-index: 2; bottom: -20px; left: -20px; background: var(--yellow); color: #16231d; font-weight: 800; padding: 14px 20px; border-radius: 10px; transform: rotate(-4deg); box-shadow: 0 12px 26px rgba(0,0,0,.4); font-size: 13px; line-height: 1.3; text-align: center; white-space: nowrap; }
 .hero-badge strong { display: block; font-size: 19px; }
 @media (max-width: 520px) { .hero-badge { left: 50%; transform: translateX(-50%) rotate(-3deg); bottom: -16px; padding: 10px 18px; } }
@@ -299,8 +299,10 @@ footer.site .wrap { padding: 0 28px; max-width: var(--maxw); margin: 0 auto; }
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow script hero-eyebrow">Kostenloses Live-Webinar</span>
-      <h1>Nervensystem-Training: <em>10 Schritte</em> zu mehr Leichtigkeit in deinem Leben.</h1>
-      <p class="lede">Du bist gestresst, getriggert, oder dir fehlt die Leichtigkeit im Leben, auch wenn du schon viel über dich weißt. In diesem kostenlosen Live-Webinar zeigen wir dir, warum Regulation allein nicht reicht, und wie du die Kapazität deines Nervensystems trainierst.</p>
+      <h1>Du schaffst so viel. <em>Nur das Leben, das du wirklich willst, bleibt immer wieder liegen.</em></h1>
+      <p class="lede">Vielleicht die Selbstständigkeit, mehr finanzieller Spielraum, eine Partnerschaft, die wieder passt – oder einfach Zeit für dich.</p>
+      <p class="lede" style="font-weight:700;color:var(--text);">Es ist Zeit, dass auch dein Leben dran ist.</p>
+      <p class="lede">In diesem kostenlosen Live-Webinar zeigen wir dir 10 Schritte, mit denen du dein Nervensystem trainierst, damit sich wirklich etwas verändert.</p>
       <div class="btn-row">
         <a href="#anmelden" class="btn btn-primary">Jetzt kostenlos anmelden</a>
       </div>
@@ -310,8 +312,8 @@ footer.site .wrap { padding: 0 28px; max-width: var(--maxw); margin: 0 auto; }
     <div class="hero-visual">
       <div class="hero-glow"></div>
       <div class="hero-photo" id="heroVideoWrap">
-        <button type="button" class="video-facade" id="heroVideoFacade" aria-label="Video abspielen: Julia und Alexandra stellen das Webinar vor">
-          <img src="https://img.youtube.com/vi/jsgP6kADuH4/maxresdefault.jpg" alt="Julia und Alexandra, Gastgeberinnen des Nervensystem-Training-Webinars"/>
+        <button type="button" class="video-facade" id="heroVideoFacade" aria-label="Video abspielen: Julia stellt das Webinar vor">
+          <img src="img/julia-intro-poster.jpg" alt="Julia, Gastgeberin des Nervensystem-Training-Webinars"/>
           <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
         </button>
       </div>
@@ -444,13 +446,20 @@ footer.site .wrap { padding: 0 28px; max-width: var(--maxw); margin: 0 auto; }
   </div>
 </section>
 
-<!-- ================= TESTIMONIALS (NOCH KEINE — EHRLICHER HINWEIS) ================= -->
+<!-- ================= TESTIMONIALS (PLATZHALTER) ================= -->
 <section class="section-alt">
-  <div class="wrap center">
-    <span class="eyebrow">Premiere</span>
-    <h2>Was Teilnehmerinnen <em>berichten.</em></h2>
-    <div class="soundbite" style="max-width:640px;margin:0 auto;">
-      <p>Noch keine Stimmen hier – weil wir selbst zum ersten Mal live gehen. Das ändert sich am 22.09.<br><em>Sei dabei und schreib die erste Zeile mit.</em></p>
+  <div class="wrap">
+    <span class="eyebrow">Nach dem ersten Webinar</span>
+    <h2>Was Teilnehmerinnen berichten.</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>„[Platzhalter: Feedback folgt nach dem ersten Webinar-Termin]"</p>
+        <div class="who">Name, Alter</div>
+      </div>
+      <div class="testi-card">
+        <p>„[Platzhalter: Feedback folgt nach dem ersten Webinar-Termin]"</p>
+        <div class="who">Name, Alter</div>
+      </div>
     </div>
   </div>
 </section>
@@ -620,19 +629,21 @@ footer.site .wrap { padding: 0 28px; max-width: var(--maxw); margin: 0 auto; }
   rsTickWebinarCountdown();
   setInterval(rsTickWebinarCountdown, 1000);
 
-  // ---- Hero-Video: YouTube erst nach Klick nachladen (schnellere Ladezeit, kein Autoplay-Tracking) ----
+  // ---- Hero-Video: eigenes Video erst nach Klick nachladen (schnellere Ladezeit) ----
   (function rsSetupHeroVideo() {
     var facade = document.getElementById('heroVideoFacade');
     var wrap = document.getElementById('heroVideoWrap');
     if (!facade || !wrap) return;
     facade.addEventListener('click', function () {
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube.com/embed/jsgP6kADuH4?autoplay=1&rel=0';
-      iframe.title = 'Webinar-Video: Julia und Alexandra stellen das Nervensystem-Training vor';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
+      var video = document.createElement('video');
+      video.src = 'video/julia-intro-webinar.mp4';
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.setAttribute('playsinline', '');
       wrap.innerHTML = '';
-      wrap.appendChild(iframe);
+      wrap.appendChild(video);
+      video.play().catch(function(){});
     });
   })();
 
@@ -663,9 +674,6 @@ footer.site .wrap { padding: 0 28px; max-width: var(--maxw); margin: 0 auto; }
       if (resp.ok) {
         form.style.display = 'none';
         document.getElementById('success-webinar').style.display = 'block';
-        // Meta-Pixel: Formular abgeschickt, aber Anmeldung noch nicht per Mail bestätigt.
-        // Nur wenn Cookie-Consent vorliegt (Pixel dann bereits über rsLoadMetaPixel geladen).
-        if (typeof fbq === 'function') { fbq('track', 'Lead'); }
       } else { throw new Error(); }
     } catch(err) {
       document.getElementById('error-webinar').style.display = 'block';
