@@ -1,6 +1,15 @@
 [functions]
   directory = "netlify/functions"
 
+# Webinar-Zahlungslinks ab 07.10.2026 00:00 Uhr (Berlin) deaktivieren = 06.10. 22:00 UTC
+[functions."deactivate-webinar-links"]
+  schedule = "0 22 6 10 *"
+
+[[redirects]]
+  from = "/kuendigen"
+  to = "/kuendigen.html"
+  status = 200
+
 [[redirects]]
   from = "/agb"
   to = "/agb.html"
@@ -10,3 +19,44 @@
   from = "/disclaimer"
   to = "/disclaimer.html"
   status = 200
+
+# Alte Umlaut-Adressen der Gefuehlstraining-Seite (NFC, NFD, kodiert) -> neue ASCII-Adresse
+[[redirects]]
+  from = "/kostenloses-gefühlstraining.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gefühlstraining"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gefühlstraining.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gefühlstraining"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gef%C3%BChlstraining.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gef%C3%BChlstraining"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gefu%CC%88hlstraining.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenloses-gefu%CC%88hlstraining"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
