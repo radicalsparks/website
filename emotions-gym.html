@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script>
+  function rsLoadGA4(){if(window._ga4loaded)return;window._ga4loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-QZG197LGWV';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QZG197LGWV');}
+  function rsLoadMetaPixel(){if(window._fbPixelLoaded)return;window._fbPixelLoaded=true;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2214706905828469');fbq('track','PageView');}
+  if(localStorage.getItem('rs_cookie_consent')==='accepted'){rsLoadGA4();rsLoadMetaPixel();}
+</script>
+<title>Das Emotions-Gym · Mitgliedschaft · Radical Sparks</title>
+<meta name="description" content="Trainiere die Gefühle, die dich bisher zurückhalten. Trainingsplan, tägliches Warm-up, Community und Live-Calls. 3 oder 12 Monate, auf Wunsch mit Personal Training."/>
+<meta name="robots" content="noindex"/>
+<link rel="canonical" href="https://www.radical-sparks.com/emotions-gym"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Das Emotions-Gym · Mitgliedschaft · Radical Sparks"/>
+<meta property="og:description" content="Trainiere die Gefühle, die dich bisher zurückhalten. Trainingsplan, tägliches Warm-up, Community und Live-Calls. 3 oder 12 Monate, auf Wunsch mit Personal Training."/>
+<meta property="og:image" content="https://www.radical-sparks.com/img/og-image.png"/>
+<meta property="og:site_name" content="Radical Sparks"/>
+<meta property="og:locale" content="de_DE"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #16231d;
+  --surface: #283b33;
+  --surface-2: #32473e;
+  --line: rgba(245,241,228,0.14);
+  --yellow: #ffde59;
+  --orange: #ff914d;
+  --text: #f5f1e4;
+  --text-mid: rgba(245,241,228,0.86);
+  --text-dim: rgba(245,241,228,0.66);
+  --radius: 6px;
+  --script: 'Carlson Script', 'Kaushan Script', cursive;
+  --body: 'Poppins', sans-serif;
+  --maxw: 1180px;
+}
+@font-face { font-family: 'Carlson Script'; src: url('fonts/CarlsonScript.woff2') format('woff2'), url('fonts/CarlsonScript.otf') format('opentype'); font-display: swap; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+section[id], article[id] { scroll-margin-top: 84px; }
+body { margin: 0; background: var(--bg); color: var(--text-mid); font-family: var(--body); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+img, svg, video { max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { color: var(--text); font-weight: 700; line-height: 1.18; margin: 0 0 18px; text-wrap: balance; }
+h1 { font-size: clamp(34px, 5.2vw, 58px); }
+h2 { font-size: clamp(28px, 4vw, 42px); }
+h3 { font-size: clamp(19px, 2.4vw, 23px); margin-bottom: 10px; }
+p { margin: 0 0 16px; }
+em { font-style: normal; color: var(--yellow); }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+.narrow { max-width: 820px; }
+section { padding: 96px 0; }
+section.tight { padding: 64px 0; }
+.eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.script { font-family: var(--script); font-weight: 400; line-height: 1.4; }
+.center { text-align: center; }
+.lede { font-size: clamp(17px, 2vw, 20px); color: var(--text-mid); max-width: 680px; }
+.center .lede { margin-left: auto; margin-right: auto; }
+.section-alt { background: var(--surface); }
+.muted { color: var(--text-dim); font-size: 14.5px; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--body); font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: .08em; padding: 17px 34px; border-radius: var(--radius); text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; text-align: center; }
+.btn-primary { background: var(--yellow); color: #16231d; }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--orange); color: #16231d; }
+.btn-ghost { background: transparent; color: var(--yellow); border-color: var(--yellow); }
+.btn-ghost:hover, .btn-ghost:focus-visible { background: var(--yellow); color: #16231d; }
+.btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.center .btn-row { justify-content: center; }
+.btn-sub { display: block; font-size: 11px; font-weight: 500; letter-spacing: .06em; opacity: .8; margin-top: 2px; }
+.btn-stack { flex-direction: column; gap: 0; }
+.textlink { color: var(--yellow); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+/* header */
+header.site { position: sticky; top: 0; z-index: 500; background: rgba(22,35,29,0.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: var(--maxw); margin: 0 auto; gap: 24px; }
+.nav-logo img { height: 44px; width: 44px; display: block; border-radius: 8px; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 28px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--text-mid); }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--yellow); }
+.nav-cta .btn { padding: 11px 22px; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--text); display: block; }
+@media (max-width: 960px) {
+  .nav-links { position: fixed; top: 72px; right: 0; left: 0; height: calc(100vh - 72px); background: var(--bg); flex-direction: column; padding: 32px 28px; gap: 22px; align-items: flex-start; display: none; overflow-y: auto; }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 17px; }
+  .nav-toggle { display: flex; }
+  .nav-cta .btn { display: none; }
+}
+
+/* hero basics */
+.hero { padding: 64px 0 88px; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero-text { text-align: center; } .hero .btn-row { justify-content: center; } .hero .lede { margin-left: auto; margin-right: auto; } }
+.hero-eyebrow { font-size: clamp(30px, 4vw, 42px); color: var(--yellow); display: block; margin-bottom: 6px; }
+.hero .lede { margin-bottom: 28px; }
+.hero-visual { position: relative; }
+.hero-glow { position: absolute; inset: -14% -18%; z-index: 0; background: radial-gradient(circle at 62% 38%, rgba(255,222,89,.24), transparent 62%); pointer-events: none; }
+.hero-photo { position: relative; z-index: 1; border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.hero-photo img { width: 100%; display: block; }
+.hero-badge { position: absolute; z-index: 2; bottom: -20px; left: -20px; background: var(--yellow); color: #16231d; font-weight: 800; padding: 14px 20px; border-radius: 10px; transform: rotate(-4deg); box-shadow: 0 12px 26px rgba(0,0,0,.4); font-size: 13px; line-height: 1.3; text-align: center; }
+.hero-badge strong { display: block; font-size: 19px; }
+@media (max-width: 520px) { .hero-badge { left: 50%; transform: translateX(-50%) rotate(-3deg); bottom: -16px; } }
+.proof { display: flex; align-items: center; gap: 14px; margin-top: 26px; font-size: 14px; color: var(--text-dim); }
+@media (max-width: 900px) { .proof { justify-content: center; } }
+.proof-faces { display: flex; }
+.proof-faces span { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--bg); background: var(--surface-2); color: var(--yellow); font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-left: -8px; }
+.proof-faces span:first-child { margin-left: 0; }
+.facts { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--text-dim); }
+.facts li::before { content: "✓"; color: var(--yellow); font-weight: 700; margin-right: 6px; }
+@media (max-width: 900px) { .facts { justify-content: center; } }
+
+/* statement */
+.statement { text-align: center; }
+.statement p { font-size: clamp(24px,3.4vw,34px); font-weight: 600; color: var(--text); max-width: 900px; margin: 0 auto; line-height: 1.4; }
+.statement .src { display: block; font-size: 14px; color: var(--text-dim); font-weight: 400; margin-top: 16px; }
+
+/* cards & grids */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+@media (max-width: 960px) { .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 680px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 30px; }
+.section-alt .card { background: var(--bg); }
+.card.solid { background: var(--surface); border-color: transparent; }
+.card .num { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--orange); font-weight: 700; display: block; margin-bottom: 10px; }
+.card h3 { color: var(--yellow); }
+.card p { margin: 0; font-size: 15.5px; }
+.card p + p { margin-top: 10px; }
+.soundbite { background: var(--surface-2); border-radius: 12px; padding: 36px clamp(24px,5vw,52px); }
+.soundbite p { font-size: clamp(19px,2.4vw,24px); color: var(--text); margin: 0; line-height: 1.5; }
+.soundbite .src { display: block; font-size: 13px; color: var(--text-dim); margin-top: 14px; }
+.check-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.check-list li { position: relative; padding-left: 26px; font-size: 16.5px; }
+.check-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--yellow); font-weight: 700; }
+.check-list strong { color: var(--text); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+@media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 32px; } }
+.photo { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.photo img { width: 100%; display: block; }
+.photo-cap { font-size: 13px; color: var(--text-dim); margin-top: 10px; }
+
+/* video */
+.video-wrap { max-width: 920px; margin: 36px auto 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--bg); aspect-ratio: 16 / 9; position: relative; }
+.video-wrap iframe, .video-wrap video { width: 100%; height: 100%; border: 0; display: block; }
+.video-facade { position: absolute; inset: 0; border: 0; padding: 0; cursor: pointer; background: var(--bg); }
+.video-facade img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .85; }
+.video-facade .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 84px; height: 84px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 28px rgba(0,0,0,.4); transition: background .15s ease; }
+.video-facade:hover .play { background: var(--orange); }
+.video-facade .play svg { width: 30px; height: 30px; fill: #16231d; margin-left: 4px; }
+.video-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; border: 2px dashed var(--orange); border-radius: 16px; color: var(--text-dim); font-size: 15px; }
+.video-placeholder strong { color: var(--orange); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+
+/* method equation */
+.equation { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: stretch; max-width: 900px; margin: 40px auto 0; }
+.equation .op { align-self: center; font-size: 34px; font-weight: 700; color: var(--orange); }
+@media (max-width: 720px) { .equation { grid-template-columns: 1fr; } .equation .op { justify-self: center; } }
+.equation-result { text-align: center; font-size: clamp(20px,2.6vw,26px); font-weight: 600; color: var(--text); max-width: 760px; margin: 36px auto 0; }
+
+/* testimonials */
+.testi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; align-items: start; text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto; }
+@media (max-width: 760px) { .testi-grid { grid-template-columns: 1fr; max-width: 680px; } }
+.testi-card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 30px; position: relative; margin: 0; }
+.section-alt .testi-card { background: var(--bg); }
+.testi-card::before { content: "“"; position: absolute; top: 6px; right: 22px; font-size: 72px; line-height: 1; color: var(--yellow); opacity: .35; font-weight: 700; }
+.testi-card blockquote { margin: 0; }
+.testi-card p { font-size: 15.5px; margin: 0 0 12px; }
+.testi-card .who { font-size: 14px; font-weight: 700; color: var(--yellow); margin-top: 16px; display: block; }
+
+/* science */
+.study { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 26px; display: flex; flex-direction: column; }
+.study .num { font-size: 12px; letter-spacing: .1em; color: var(--orange); font-weight: 700; margin-bottom: 8px; }
+.study h3 { font-size: 17px; color: var(--text); }
+.study p { font-size: 14.5px; margin: 0 0 12px; }
+.study cite { font-style: normal; font-size: 12.5px; color: var(--text-dim); margin-top: auto; }
+.stat-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 44px; text-align: center; }
+@media (max-width: 760px) { .stat-row { grid-template-columns: 1fr 1fr; } }
+.stat-row strong { display: block; font-size: clamp(28px,3.6vw,40px); color: var(--yellow); font-weight: 800; line-height: 1.1; }
+.stat-row span { font-size: 14px; color: var(--text-dim); }
+
+/* team */
+.team-grid { display: grid; grid-template-columns: 300px 1fr 1fr; gap: 28px; align-items: stretch; }
+@media (max-width: 900px) { .team-grid { grid-template-columns: 1fr 1fr; } .team-photo { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
+.team-photo { border-radius: 12px; overflow: hidden; background: var(--bg); min-height: 260px; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.team-card { background: var(--bg); border-radius: 12px; padding: 32px; border: 1px solid var(--line); }
+.team-card h3 { color: var(--yellow); }
+.team-card .role { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); margin-bottom: 14px; display: block; }
+.team-card p { font-size: 15px; }
+
+/* two-way cards */
+.way { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 36px clamp(24px,4vw,40px); }
+.way.featured { border: 2px solid var(--yellow); }
+.way .tag { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--orange); margin-bottom: 10px; }
+.way h3 { font-size: clamp(21px,2.6vw,26px); }
+.way .btn-row { margin-top: auto; padding-top: 20px; }
+.way-quote { border-left: 3px solid var(--yellow); padding-left: 16px; margin: 8px 0 16px; font-size: 15px; color: var(--text); }
+
+/* faq */
+.faq-item { border-bottom: 1px solid var(--line); padding: 22px 0; }
+.faq-item summary { cursor: pointer; font-weight: 600; color: var(--text); font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--yellow); font-size: 22px; flex-shrink: 0; }
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { margin: 14px 0 0; color: var(--text-dim); font-size: 15.5px; }
+
+/* footer */
+footer.site { background: var(--surface); border-top: 1px solid var(--line); padding: 56px 0 28px; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+.footer-logo img { height: 28px; width: 28px; display: block; border-radius: 6px; margin-bottom: 12px; }
+.footer-tagline { font-size: 14px; color: var(--text-dim); }
+.footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+.footer-cols h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--text); margin: 0 0 12px; }
+.footer-cols ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.footer-cols a { text-decoration: none; font-size: 14.5px; color: var(--text-mid); }
+.footer-cols a:hover { color: var(--yellow); }
+.footer-social { display: flex; gap: 14px; margin-top: 14px; }
+.footer-social a { color: var(--text-dim); display: inline-flex; }
+.footer-social a:hover { color: var(--yellow); }
+.footer-social svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+.footer-disclaimer { border-top: 1px solid var(--line); padding: 22px 0; margin-bottom: 22px; font-size: 13px; color: var(--text-dim); line-height: 1.65; }
+.footer-disclaimer a { color: var(--yellow); }
+.footer-bottom { font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--line); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+/* cookie banner */
+#rs-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--surface);color:var(--text);padding:20px 32px;box-shadow:0 -4px 24px rgba(0,0,0,.3);border-top:1px solid var(--line);}
+.rs-cb-inner{display:flex;align-items:center;gap:20px;flex-wrap:wrap;max-width:960px;margin:0 auto;}
+#rs-cookie-banner p{flex:1;min-width:220px;font-size:14px;line-height:1.6;margin:0;color:var(--text-dim);}
+#rs-cookie-banner a{color:var(--yellow);}
+.rs-cb-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.rs-cb-accept,.rs-cb-decline{border-radius:4px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid var(--yellow);font-family:var(--body);}
+.rs-cb-accept{background:var(--yellow);color:var(--bg);}
+.rs-cb-decline{background:transparent;color:var(--text-dim);border-color:var(--line);}
+@media(max-width:600px){#rs-cookie-banner{padding:16px 20px;}.rs-cb-inner{flex-direction:column;align-items:flex-start;}.rs-cb-btns{width:100%;}.rs-cb-accept,.rs-cb-decline{flex:1;text-align:center;}}
+
+
+/* hero: auf dem Desktop komplett ohne Scrollen sichtbar */
+@media (min-width: 901px) {
+  .hero { padding: 28px 0 36px; min-height: calc(100svh - 73px); display: flex; align-items: center; }
+  .hero > .wrap { width: 100%; }
+  .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
+  .hero h1 { font-size: clamp(34px, 3.4vw, 48px); margin-bottom: 14px; }
+  .hero-eyebrow { font-size: clamp(26px, 2.6vw, 34px); margin-bottom: 2px; }
+  .hero .lede { font-size: 18px; margin-bottom: 20px; }
+  .hero .btn { padding: 15px 26px; }
+  .hero-photo img { max-height: calc(100svh - 180px); object-fit: cover; }
+  .hero .proof { margin-top: 18px; }
+  .hero .facts { margin-top: 16px; }
+}
+@media (min-width: 901px) and (max-height: 760px) {
+  .hero h1 { font-size: clamp(32px, 3vw, 40px); }
+  .hero-eyebrow { font-size: 26px; }
+  .hero .lede { font-size: 16.5px; margin-bottom: 16px; }
+  .hero .muted { margin-top: 10px !important; }
+  .hero-badge { padding: 10px 16px; }
+}
+
+@media (max-width: 680px) {
+  section { padding: 72px 0; }
+  .wrap { padding: 0 16px; }
+  .nav { padding: 12px 16px; }
+  .hero { padding: 40px 0 72px; }
+}
+
+/* test */
+.trial { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1000px; margin: 36px auto 0; background: var(--surface-2); border-left: 3px solid var(--yellow); border-radius: 14px; padding: 34px clamp(22px,4vw,44px); }
+.trial h3 { font-size: clamp(22px,2.6vw,28px); }
+.trial p { margin: 0; font-size: 15.5px; }
+.trial .check-list li { font-size: 15px; }
+.bonus-box { max-width: 1000px; margin: 0 auto 36px; background: var(--surface-2); border: 1.5px solid var(--yellow); border-radius: 14px; padding: 28px clamp(22px,4vw,40px); display: flex; gap: 28px; align-items: center; text-align: left; box-shadow: 0 0 0 6px rgba(255,222,89,.07); scroll-margin-top: 110px; }
+.bonus-mark { flex-shrink: 0; width: 108px; height: 108px; border-radius: 50%; background: var(--yellow); color: #16231d; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; line-height: 1; transform: rotate(-4deg); box-shadow: 0 12px 26px rgba(0,0,0,.35); }
+.bonus-mark strong { font-size: 40px; color: #16231d; }
+.bonus-mark span { font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; margin-top: 4px; }
+.bonus-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #16231d; background: var(--orange); border-radius: 999px; padding: 5px 13px; margin-bottom: 12px; }
+.bonus-box h3 { margin: 0 0 8px; font-size: clamp(21px,2.5vw,27px); color: var(--text); }
+.bonus-box p { margin: 0; font-size: 15.5px; color: var(--text-mid); }
+.bonus-box p strong { color: var(--text); }
+@media (max-width: 640px) { .bonus-box { flex-direction: column; text-align: center; gap: 18px; } .bonus-mark { width: 92px; height: 92px; } .bonus-mark strong { font-size: 34px; } }
+.hero-bonus { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 26px; padding: 9px 18px 9px 10px; border: 1px solid var(--yellow); border-radius: 14px; background: rgba(255,222,89,.08); font-size: 14.5px; line-height: 1.35; color: var(--text); text-decoration: none; text-align: left; }
+.hero-bonus b { flex-shrink: 0; background: var(--yellow); color: #16231d; font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 999px; padding: 5px 11px; }
+.hero-bonus:hover { border-color: var(--orange); }
+.portal-shot { max-width: 1000px; margin: 48px auto 0; }
+.portal-shot img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+.portal-shot figcaption { margin-top: 14px; text-align: center; font-size: 14px; color: var(--text-dim); }
+.bonus-li strong { color: var(--yellow); }
+@media (max-width: 680px) { .hero-bonus { margin-bottom: 18px; font-size: 13.5px; } }
+@media (max-width: 820px) { .trial { grid-template-columns: 1fr; gap: 20px; } }
+/* vorteile */
+.benefits { gap: 24px; }
+.benefit { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 32px clamp(22px,3vw,34px); display: flex; flex-direction: column; }
+.benefit .num { font-size: 12px; letter-spacing: .1em; color: var(--orange); font-weight: 700; margin-bottom: 10px; }
+.benefit h3 { color: var(--yellow); font-size: clamp(20px,2.3vw,24px); }
+.benefit p { font-size: 15.5px; }
+.benefit .why { background: var(--surface); border-left: 3px solid var(--yellow); border-radius: 8px; padding: 14px 16px; font-size: 14.5px; margin: 6px 0 12px; }
+.benefit .why strong { color: var(--text); }
+.benefit cite { font-style: normal; font-size: 12.5px; color: var(--text-dim); margin-top: auto; }
+/* preise */
+.term-switch { display: inline-flex; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 5px; margin: 28px 0 40px; gap: 4px; flex-wrap: wrap; justify-content: center; }
+.term-switch button { font-family: var(--body); font-size: 14.5px; font-weight: 600; color: var(--text-mid); background: transparent; border: 0; border-radius: 999px; padding: 11px 22px; cursor: pointer; }
+.term-switch button[aria-selected="true"] { background: var(--yellow); color: #16231d; }
+.term-save { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin-left: 6px; color: var(--orange); }
+.term-switch button[aria-selected="true"] .term-save { color: #16231d; opacity: .75; }
+.price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1000px; margin: 0 auto; align-items: stretch; }
+@media (max-width: 820px) { .price-grid { grid-template-columns: 1fr; } }
+.price-card { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 40px clamp(22px,4vw,36px) 32px; display: flex; flex-direction: column; }
+.price-card.featured { border: 2px solid var(--yellow); box-shadow: 0 12px 28px rgba(0,0,0,.35); }
+.price-badge { position: absolute; top: -15px; left: 28px; background: var(--yellow); color: #16231d; font-weight: 800; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; transform: rotate(-3deg); box-shadow: 0 8px 18px rgba(0,0,0,.3); }
+.price-badge.orange { background: var(--orange); }
+.price-card h3 { font-size: clamp(20px,2.4vw,24px); margin-bottom: 2px; }
+.price-term { font-size: 14px; color: var(--text-dim); margin: 0 0 18px; }
+.price-now { font-size: clamp(42px,5.6vw,54px); font-weight: 800; color: var(--yellow); line-height: 1; font-variant-numeric: tabular-nums; }
+.price-per { font-size: 14.5px; color: var(--text-dim); margin: 8px 0 22px; }
+.check-list.small { gap: 10px; margin-bottom: 26px; }
+.check-list.small li { font-size: 15px; }
+.pay-label { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--text); margin-bottom: 10px; display: block; }
+.pay-options { border: 0; margin: 0 0 22px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.pay-option { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px 13px 46px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; font-size: 15px; }
+.pay-option input { position: absolute; opacity: 0; pointer-events: none; }
+.pay-option::before { content: ""; position: absolute; left: 16px; top: 50%; width: 18px; height: 18px; margin-top: -9px; border-radius: 50%; border: 2px solid var(--text-dim); }
+.pay-option:has(input:checked) { border-color: var(--yellow); background: rgba(255,222,89,.07); }
+.pay-option:has(input:checked)::before { border-color: var(--yellow); background: radial-gradient(circle, var(--yellow) 0 45%, transparent 50%); }
+.pay-option:has(input:focus-visible) { outline: 2px solid var(--orange); outline-offset: 2px; }
+.pay-option .amt { font-weight: 700; color: var(--text); white-space: nowrap; }
+.price-card .btn { width: 100%; margin-top: auto; }
+.fine-print { max-width: 1000px; margin: 36px auto 0; font-size: 14.5px; color: var(--text-dim); }
+.fine-print strong { color: var(--text); display: block; margin-bottom: 4px; }
+.order-box { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; background: var(--surface-2); border-left: 3px solid var(--yellow); border-radius: 12px; padding: 28px clamp(22px,4vw,40px); }
+.steps .card { position: relative; }
+.step-no { display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: var(--yellow); color: #16231d; font-weight: 800; align-items: center; justify-content: center; margin-bottom: 14px; }
+.step-time { display: block; margin-top: 14px; font-size: 13px; color: var(--orange); font-weight: 600; }
+
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="nav-logo" href="index.html"><img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="emotions-gym.html" aria-current="page" onclick="rsCloseMenu()">Emotions-Gym</a></li>
+      <li><a href="kostenloses-gefuehlstraining.html" onclick="rsCloseMenu()">Kostenloses Gefühlstraining</a></li>
+      <li><a href="ueber-uns.html" onclick="rsCloseMenu()">Über uns</a></li>
+      <li><a href="podcast.html" onclick="rsCloseMenu()">Podcast</a></li>
+    </ul>
+    <div class="nav-cta"><a href="kostenloses-gefuehlstraining.html" class="btn btn-primary">Kostenlos ausprobieren</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" onclick="rsToggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- 1 HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Du hast viel über dich verstanden. <em>Und bist trotzdem nicht da, wo du sein möchtest.</em></h1>
+      <p class="lede">Das Fitnessstudio für emotionale Kapazität — wissenschaftlich fundiertes Training für dein Nervensystem. Mehr Selbstbewusstsein, mehr Handlungsspielraum, mehr von den Gefühlen, die du dir wünschst. Mit einem Trainingsplan für dein Nervensystem und echten Trainerinnen an deiner Seite.</p>
+      <a href="#bonus" class="hero-bonus"><b>Bonus</b><span>30 Min. individueller Check-in mit Julia zum Kursstart</span></a>
+      <div class="btn-row">
+        <a href="#preise" class="btn btn-primary">Mitgliedschaft wählen</a>
+        <a href="#trainingsplan" class="btn btn-ghost">Trainingsplan ansehen</a>
+      </div>
+      <ul class="facts">
+        <li>3 oder 12 Monate</li>
+        <li>Ratenzahlung ohne Aufschlag</li>
+        <li>3 Tage kostenlos testen</li>
+        <li>von zu Hause aus</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-glow"></div>
+      <div class="hero-photo"><img src="img/willkommen-julia-alexandra.jpg" alt="Julia und Alexandra heißen dich im Emotions-Gym willkommen"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 SCHMERZ -->
+<section class="section-alt">
+  <div class="wrap narrow">
+    <span class="eyebrow">Ehrlich gesagt</span>
+    <h2>Genug <em>verstanden.</em></h2>
+    <p>Vielleicht hast du schon vieles probiert: Therapie, Coaching, Bücher, Podcasts. Du kennst deine Muster und kannst sie erklären. Und trotzdem landest du immer wieder an derselben Stelle.</p>
+    <p>Das ist kein fehlendes Mindset. Dein Nervensystem sucht sich nicht das Beste für dich aus, sondern das Bekannte. <strong style="color:var(--text);">Welche Gefühle du vermeidest, entscheidet, welche Handlungen du vermeidest.</strong></p>
+    <p>Damit sich wirklich etwas verändert, muss dein Nervensystem mitmachen. Genau da setzt das Emotions-Gym an: nicht mit noch mehr Wissen, sondern mit Training.</p>
+  </div>
+</section>
+
+<!-- 3 METHODE -->
+<section id="methode">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Die Methode</span>
+      <h2>Drei Richtungen, <em>ein Training.</em></h2>
+      <p class="lede" style="margin-bottom:40px;">Das Emotions-Gym trainiert dein Nervensystem in drei Richtungen, die ineinandergreifen.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card solid"><span class="num">01</span><h3>Regulation</h3><p>Du lernst, dich in Sekunden sicher zu fühlen. Atem, Körper, Orientierung. Das ist die Basis, auf der Training überhaupt erst möglich wird.</p></div>
+      <div class="card solid"><span class="num">02</span><h3>Schwierige Gefühle halten</h3><p>Angst, Scham, Unsicherheit: Du gibst ihnen Raum, bis sie zu Ende gefühlt sind, statt auszuweichen. So bleibst du handlungsfähig.</p></div>
+      <div class="card solid"><span class="num">03</span><h3>Wunschgefühle trainieren</h3><p>Nähe, Freude, Stolz und Verbundenheit kommen selten von allein. Im täglichen Warm-up trainierst du sie gezielt.</p></div>
+    </div>
+    <p class="center" style="margin:32px auto 0;max-width:720px;">Jede Richtung wirkt für sich. Zusammen verschieben sie Schritt für Schritt deine Kapazitätsgrenze.</p>
+    <div class="soundbite" style="max-width:760px;margin:32px auto 0;">
+      <p>„Das Training hat mir geholfen, meine Gefühle bewusster wahrzunehmen und mich im Aushalten zu üben, statt sofort zu reagieren. <em>Es macht mich handlungsfähiger und bringt Ruhe im Familienalltag.</em>“</p>
+      <span class="src">Tamara, 43 Jahre</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4 VORTEILE -->
+<section class="section-alt" id="vorteile">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Deine Vorteile</span>
+      <h2>Wissenschaft trifft auf <em>echtes Training.</em></h2>
+      <p class="lede" style="margin-bottom:44px;">Im Emotions-Gym steckt kein Motivationsspruch und keine Wohlfühl-Übung ohne Richtung. Sondern das, was Psychologie und Neurowissenschaft über Veränderung wissen, übersetzt in ein Training, das in deinen Alltag passt.</p>
+    </div>
+    <div class="grid-2 benefits">
+      <article class="benefit">
+        <span class="num">01</span>
+        <h3>Du reagierst nicht mehr automatisch.</h3>
+        <p>Zwischen dem, was passiert, und deiner Reaktion entsteht Raum. In diesem Raum kannst du wählen, statt in das alte Muster zu fallen.</p>
+        <p class="why"><strong>Warum es wirkt:</strong> Nach gezieltem Training arbeiten die Hirnnetzwerke für bewusste emotionale Kontrolle nachweislich effizienter. Teilnehmende reagierten unter Druck bewusster, statt automatisch zu handeln.</p>
+        <cite>Schweizer et al., The Journal of Neuroscience, 2013</cite>
+      </article>
+      <article class="benefit">
+        <span class="num">02</span>
+        <h3>Du handelst, auch wenn Angst da ist.</h3>
+        <p>Das Gespräch, der Launch, die Grenze, die du setzen willst: Du gehst den Schritt, obwohl ein schwieriges Gefühl mitkommt.</p>
+        <p class="why"><strong>Warum es wirkt:</strong> Gefühle zu vermeiden gilt in der Verhaltensforschung als einer der zentralen Mechanismen hinter Mustern, die uns von unseren Wünschen abhalten. Wer lernt, Gefühle zuzulassen, statt auszuweichen, gewinnt Handlungsspielraum zurück.</p>
+        <cite>Hayes et al., Journal of Consulting and Clinical Psychology, 1996</cite>
+      </article>
+      <article class="benefit">
+        <span class="num">03</span>
+        <h3>Die guten Gefühle bleiben länger.</h3>
+        <p>Freude, Stolz und Nähe sind nicht mehr kaum da und schon wieder weg. Du kannst sie halten und bewusst mehr davon in dein Leben holen.</p>
+        <p class="why"><strong>Warum es wirkt:</strong> Negative Erfahrungen wiegen für unser Gehirn nachweislich schwerer als positive. Deshalb kommen die schönen Gefühle selten von allein. Im täglichen Warm-up trainierst du sie gezielt, bis dein Nervensystem sie kennt.</p>
+        <cite>Baumeister et al., Review of General Psychology, 2001</cite>
+      </article>
+      <article class="benefit">
+        <span class="num">04</span>
+        <h3>Die Veränderung bleibt.</h3>
+        <p>Kein kurzer Aha-Moment, der nach einer Woche verpufft. Deine Kapazität wächst Schritt für Schritt, und was du trainiert hast, bleibt.</p>
+        <p class="why"><strong>Warum es wirkt:</strong> In einer Studie verbesserte sich die Emotionsregulation nach 20 Tagen gezieltem Training messbar, und der Effekt war drei Monate später noch nachweisbar. Genau deshalb setzt das Gym auf Wiederholung statt auf Einsicht.</p>
+        <cite>Neuropsychological Rehabilitation, 2025</cite>
+      </article>
+    </div>
+    <div class="soundbite" style="max-width:820px;margin:44px auto 0;">
+      <p>„Ich war schnell im Thema und fand es super, wie verständlich alles erklärt wird und wie gut es sich im Alltag umsetzen lässt. <em>Ich habe das Gefühl, [meinem] Ziel jetzt schon viele Schritte näher gekommen zu sein.</em>“</p>
+      <span class="src">Silke, 54 Jahre</span>
+    </div>
+  </div>
+</section>
+
+<!-- 5 TRAININGSPLAN -->
+<section id="trainingsplan">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Der Trainingsplan</span>
+      <h2>Klar aufgebaut. <em>Flexibel im Alltag.</em></h2>
+      <p class="lede" style="margin-bottom:40px;">Du weißt immer, was als Nächstes kommt. Und du trainierst in deinem Tempo, on demand, von zu Hause aus.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><span class="num">Start · Eingangscheck</span><h3>Wenn du wissen willst, wo du stehst.</h3><p>Du machst deinen Fitness-Check, legst deinen Trainingsrhythmus fest und richtest dein tägliches Warm-up ein.</p></div>
+      <div class="card"><span class="num">Kurs · Trainingsziel &amp; Klarheit</span><h3>Wenn du noch nicht genau weißt, wo du hinwillst.</h3><p>Du findest heraus, wo du wirklich Veränderung willst, und lernst die Sprache deiner Gefühle: welche du meidest, welche du suchst.</p></div>
+      <div class="card"><span class="num">Kurs · Nervensystem trainieren</span><h3>Wenn du immer an derselben Stelle aussteigst.</h3><p>Du gehst bewusst in Kontakt mit dem Gefühl, das du bisher vermieden hast, und erweiterst Schritt für Schritt deine Kapazitätsgrenze.</p></div>
+      <div class="card"><span class="num">Kurs · Umsetzung</span><h3>Wenn Wissen dich nicht ins Handeln bringt.</h3><p>Du bringst das Trainierte in dein Leben und schließt die Lücke zwischen Wissen und Handeln, bis zum nächsten großen Schritt.</p></div>
+      <div class="card"><span class="num">Jeden Tag · Warm-up</span><h3>Wenn du wenig Zeit hast.</h3><p>Ab 7 Minuten am Tag: erst regulieren, dann die Gefühle üben, die du dir mehr in deinem Leben wünschst.</p></div>
+      <div class="card"><span class="num">Jeden Monat · Live-Call</span><h3>Wenn du Fragen hast oder Motivation brauchst.</h3><p>Im Live-Community-Call tauschst du dich aus, holst dir Inspiration und kannst live gecoacht werden.</p></div>
+    </div>
+    <figure class="portal-shot">
+      <img src="img/portal-emotions-gym.jpg" alt="Blick in den Mitgliederbereich des Emotions-Gym mit Startseite und Überblick über die Kurse" width="1800" height="916" loading="lazy"/>
+      <figcaption>So sieht dein Mitgliederbereich aus.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 6 VERTRAUEN -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Keine anonyme App</span>
+      <h2>Ein Raum, der dir <em>Sicherheit</em> gibt.</h2>
+      <p class="lede" style="margin-bottom:40px;">Im Emotions-Gym wirst du nicht mit Videos allein gelassen. Du trainierst mit Menschen, die du kennst.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Trainerinnen, die du kennst</h3><p>Alexandra und Julia führen dich durch jede Einheit. Sie haben das Gym gebaut und den Weg selbst trainiert.</p></div>
+      <div class="card"><h3>Die richtige Dosis</h3><p>Niemand legt im ersten Training 100 Kilo auf. Du gehst nie schneller, als dein Nervensystem mitkommt.</p></div>
+      <div class="card"><h3>Nicht allein dranbleiben</h3><p>Der Moment, in dem du aufhören willst, ist oft der, in dem es wirkt. Genau dann helfen Community, Calls und Menschen, die mittrainieren.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 EXTRAS -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Extras</span>
+      <h2>Was du <em>zusätzlich</em> bekommst.</h2>
+    </div>
+    <div class="bonus-box" id="bonus" style="max-width:none;margin-top:40px;margin-bottom:28px;">
+      <div class="bonus-mark" aria-hidden="true"><strong>30</strong><span>Minuten</span></div>
+      <div>
+        <span class="bonus-tag">Dein Bonus zum Kursstart</span>
+        <h3>30 Minuten individueller Check-in <em>mit Julia.</em></h3>
+        <p>Zum Kursstart nimmt sich Julia 30 Minuten nur für dich. Ihr schaut gemeinsam, wo du gerade stehst und worauf es in deinem Training ankommt. So startest du nicht allein, sondern mit einem klaren ersten Schritt. <strong>In jeder Mitgliedschaft inklusive.</strong></p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card solid"><span class="num">01</span><h3>Monatliche Live-Calls</h3><p>Erfahrungsaustausch, Inspiration und Live-Coachings mit Alexandra und Julia. Verpasst? Die Aufzeichnung bleibt im Mitgliederbereich.</p></div>
+      <div class="card solid"><span class="num">02</span><h3>Die Community</h3><p>Ein geschützter Raum im Mitgliederbereich, in dem du dich mit Menschen austauschst, die denselben Weg gehen wie du.</p></div>
+      <div class="card solid"><span class="num">03</span><h3>Neue Kurse zu deinen Lebensthemen</h3><p>Regelmäßig kommen neue Kurse zu bestimmten Themen dazu, zum Beispiel Beziehungen, Geld und Erfolg im Beruf. Die Bibliothek wächst nach und nach, und als Mitglied hast du auf alles Zugriff.</p></div>
+    </div>
+    <p class="center muted" style="margin:28px auto 0;max-width:720px;">Du willst persönliche Begleitung? Personal Training mit einer Einzelstunde pro Monat gibt es als eigene Mitgliedschaft gegen Aufpreis. <a href="#personal-training" class="textlink">Mehr zum Personal Training</a></p>
+  </div>
+</section>
+
+<!-- 7a PERSONAL TRAINING: WARUM -->
+<section class="section-alt" id="personal-training">
+  <div class="wrap split">
+    <div class="photo"><img src="img/julia-alexandra-hero.jpg" alt="Julia und Alexandra, deine Personal Trainerinnen" loading="lazy"/></div>
+    <div>
+      <span class="eyebrow">Personal Training</span>
+      <h2>Manche trainieren lieber allein. <em>Andere mit Personal Trainerin.</em></h2>
+      <p>Mit unserer ersten Kohorte haben wir gemerkt: Es gibt unterschiedliche Lerntypen. Manchen fällt es leicht, alles allein zu machen. Andere brauchen ein bisschen mehr Unterstützung. Wie im normalen Fitnessstudio auch.</p>
+      <p>Du weißt selbst am besten, wie du lernst. Wenn du persönliche Begleitung willst, gibt es das Emotions-Gym mit Personal Training.</p>
+      <p><strong style="color:var(--text);">Der Vorteil: Wir sind deine Personal Trainerinnen.</strong> Wir haben das Gym gebaut, wissen, worum es geht, und sind den Weg selbst gegangen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7b PERSONAL TRAINING: FÜR WEN & WAS DU BEKOMMST -->
+<section>
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="card solid">
+        <span class="num">Für wen</span>
+        <h3>Besonders hilfreich, wenn du …</h3>
+        <ul class="check-list small" style="margin:14px 0 0;">
+          <li>… noch nicht genau weißt, was dein Ziel ist.</li>
+          <li>… spürst, dass dich etwas zurückhält, aber nicht genau weißt, was.</li>
+          <li>… weißt, dass es dir schwerfällt, Dinge allein umzusetzen.</li>
+          <li>… schneller vorankommen willst, mit persönlicher Rückmeldung.</li>
+        </ul>
+      </div>
+      <div class="card solid">
+        <span class="num">Was du bekommst</span>
+        <h3>Alles aus dem Gym. Plus uns.</h3>
+        <ul class="check-list small" style="margin:14px 0 0;">
+          <li><strong>1 Personal-Training-Stunde pro Monat</strong>, 1:1 online mit Julia oder Alexandra</li>
+          <li>Individuell auf dein Trainingsziel und deine Themen abgestimmt</li>
+          <li>Alles aus dem Emotions-Gym: Trainingsplan, Warm-up, Live-Calls, Community</li>
+          <li>Als eigene Mitgliedschaft: 3 Monate für 1.200 € oder 12 Monate für 3.000 €, auch in Raten ohne Aufschlag</li>
+        </ul>
+      </div>
+    </div>
+    <div class="center" style="margin-top:32px;">
+      <a href="#preis-pt" class="btn btn-primary">Personal Training wählen</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 PREISE -->
+<section class="section-alt" id="preise">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Mitgliedschaft</span>
+      <h2>Ein Jahr Training. <em>Für den Preis von drei Coaching-Stunden.</em></h2>
+      <p class="lede">Eine einzelne Coaching-Stunde kostet schnell 120 bis 150 €. Im Emotions-Gym trainierst du ab 37,50 € im Monat, jeden Tag, genau dann, wenn es drauf ankommt.</p>
+      <div class="term-switch" role="tablist" aria-label="Laufzeit wählen">
+        <button type="button" role="tab" data-term="12" aria-selected="true">12 Monate <span class="term-save">bester Preis</span></button>
+        <button type="button" role="tab" data-term="3" aria-selected="false">3 Monate</button>
+      </div>
+    </div>
+
+    <div class="price-grid">
+      <article class="price-card featured" data-plan="gym">
+        <span class="price-badge">Beliebt</span>
+        <h3>Emotions-Gym</h3>
+        <p class="price-term" data-slot="term"></p>
+        <div class="price-main"><span class="price-now" data-slot="price"></span></div>
+        <p class="price-per" data-slot="per"></p>
+        <ul class="check-list small">
+          <li class="bonus-li"><strong>Bonus:</strong> 30 Min. individueller Check-in mit Julia zum Kursstart</li>
+          <li>Eingangscheck und drei Kurse: Trainingsziel &amp; Klarheit, Nervensystem trainieren, Umsetzung</li>
+          <li>Tägliches Warm-up für dein Nervensystem</li>
+          <li>Monatliche Live-Community-Calls</li>
+          <li>Community-Bereich</li>
+          <li>Zugriff auf alle neuen Themenkurse, zum Beispiel zu Beziehungen, Geld und Beruf</li>
+        </ul>
+        <span class="pay-label">Wie möchtest du zahlen?</span>
+        <fieldset class="pay-options" data-slot="pay"></fieldset>
+        <a class="btn btn-primary price-cta" href="#">Mitgliedschaft starten</a>
+      </article>
+
+      <article class="price-card" data-plan="pt" id="preis-pt">
+        <span class="price-badge orange">Mit Begleitung</span>
+        <h3>Emotions-Gym + Personal Training</h3>
+        <p class="price-term" data-slot="term"></p>
+        <div class="price-main"><span class="price-now" data-slot="price"></span></div>
+        <p class="price-per" data-slot="per"></p>
+        <ul class="check-list small">
+          <li><strong>Alles aus dem Emotions-Gym</strong></li>
+          <li class="bonus-li"><strong>Bonus:</strong> 30 Min. individueller Check-in mit Julia zum Kursstart</li>
+          <li><strong>1 Personal-Training-Stunde pro Monat</strong> mit Julia oder Alexandra</li>
+          <li>Individuelle Begleitung bei deinem Trainingsziel</li>
+          <li>Ideal, wenn dir das Umsetzen allein schwerfällt</li>
+        </ul>
+        <span class="pay-label">Wie möchtest du zahlen?</span>
+        <fieldset class="pay-options" data-slot="pay"></fieldset>
+        <a class="btn btn-ghost price-cta" href="#">Mit Personal Training starten</a>
+      </article>
+    </div>
+
+    <div class="bonus-box" style="margin-top:36px;margin-bottom:0;">
+      <div class="bonus-mark" aria-hidden="true"><strong>30</strong><span>Minuten</span></div>
+      <div>
+        <span class="bonus-tag">Dein Bonus zum Kursstart</span>
+        <h3>30 Minuten individueller Check-in <em>mit Julia.</em></h3>
+        <p>Zum Kursstart nimmt sich Julia 30 Minuten nur für dich, damit du mit einem klaren ersten Schritt ins Training gehst. <strong>In jeder Mitgliedschaft inklusive.</strong></p>
+      </div>
+    </div>
+
+    <div class="trial" id="testen">
+      <div>
+        <span class="eyebrow">Ohne Risiko</span>
+        <h3>3 Tage testen. <em>Ohne Risiko.</em></h3>
+        <p>Du holst dir deinen Zugang, öffnest den Mitgliederbereich und trainierst 3 Tage lang, wie du willst. Eingangscheck, erstes Warm-up, die erste Trainingseinheit. Danach weißt du, ob das Emotions-Gym zu dir passt.</p>
+      </div>
+      <ul class="check-list">
+        <li><span><strong>Heute 0 €.</strong> Die erste Zahlung wird erst nach deinen 3 Testtagen fällig.</span></li>
+        <li><span><strong>Passt es nicht?</strong> Kündige innerhalb der 3 Tage über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>. Es wird nichts abgebucht, ohne Begründung, ohne Rückfrage.</span></li>
+        <li><span><strong>Passt es?</strong> Dann trainierst du einfach weiter. Ab Tag 4 beginnt deine Mitgliedschaft mit der gewählten Laufzeit.</span></li>
+      </ul>
+    </div>
+
+    <div class="grid-3 fine-print">
+      <div><strong>Ratenzahlung ohne Aufschlag.</strong> Du zahlst in Raten genau den gleichen Preis wie bei Einmalzahlung.</div>
+      <div><strong>Feste Laufzeit, ehrlich begründet.</strong> Veränderung braucht ein Minimum an Training. Deshalb gibt es keine Monatsmitgliedschaft.</div>
+      <div><strong>Transparent.</strong> Nach der Mindestlaufzeit läuft die Mitgliedschaft weiter, bis du kündigst. Es gelten unsere <a href="/agb" class="textlink">AGB</a>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 BESTELL-WIEDERHOLUNG -->
+<section class="tight">
+  <div class="wrap">
+    <div class="order-box">
+      <div>
+        <span class="eyebrow" style="margin-bottom:6px;">Jetzt starten</span>
+        <h3 style="margin:0;">Deine Mitgliedschaft im Emotions-Gym</h3>
+        <p class="muted" style="margin:6px 0 0;">Heute 0 € · 3 Tage kostenlos testen · danach ab 37,50 € im Monat</p>
+      </div>
+      <a href="#preise" class="btn btn-primary">Mitgliedschaft wählen</a>
+    </div>
+  </div>
+</section>
+
+<!-- 10 SCHRITTE -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">So startest du</span>
+      <h2>In drei Schritten <em>im Training.</em></h2>
+    </div>
+    <div class="grid-3 steps" style="margin-top:40px;">
+      <div class="card"><span class="step-no">1</span><h3>Mitgliedschaft wählen</h3><p>Laufzeit und Zahlweise wählen. Heute zahlst du 0 €, die erste Zahlung kommt erst nach 3 Testtagen.</p><span class="step-time">ca. 2 Minuten</span></div>
+      <div class="card"><span class="step-no">2</span><h3>Zugang bekommen</h3><p>Du bekommst deine Zugangsdaten zum Mitgliederbereich und alle nächsten Schritte per E-Mail.</p><span class="step-time">direkt nach dem Kauf</span></div>
+      <div class="card"><span class="step-no">3</span><h3>Eingangscheck &amp; Warm-up</h3><p>Du machst deinen Fitness-Check, legst deinen Rhythmus fest und startest mit dem ersten Warm-up. Dazu kommt dein 30-minütiger Check-in mit Julia.</p><span class="step-time">ab 7 Minuten</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 STIMMEN -->
+<section id="stimmen">
+  <div class="wrap center">
+    <span class="eyebrow">Stimmen</span>
+    <h2>Was sich <em>verändert.</em></h2>
+    <div class="testi-grid" style="margin-top:40px;">
+      <figure class="testi-card"><blockquote>
+        <p>Der Ansatz eines Fitnessstudios für Emotionen gefällt mir sehr gut, weil man in eine Regelmäßigkeit kommt und so kontinuierlich an den eigenen Themen arbeitet.</p>
+        <p>Das ist wie im Sport: Man merkt erste Fortschritte, also den „Muskelaufbau“, nach den ersten Trainingseinheiten. Ich spüre bereits Veränderung in meiner Wahrnehmung und mehr Fokus.</p>
+      </blockquote><figcaption class="who">Patrick, 54 Jahre</figcaption></figure>
+      <figure class="testi-card"><blockquote>
+        <p>Das Training hat mir geholfen, meine Gefühle bewusster wahrzunehmen und mich im „Aushalten“ dieser zu üben und nicht sofort zu reagieren. Das klappt nicht immer gleich gut, aber schon viel besser.</p>
+        <p>Es macht mich handlungsfähiger und bringt Ruhe im Familienalltag. Es schafft Verständnis mir selbst gegenüber, aber auch gegenüber anderen.</p>
+      </blockquote><figcaption class="who">Tamara, 43 Jahre</figcaption></figure>
+      <figure class="testi-card"><blockquote>
+        <p>Der Kurs hat mir besonders beim Thema Nervensystem total geholfen und mir endlich Klarheit verschafft. Alles wurde super verständlich erklärt, ohne kompliziertes Drumherum.</p>
+        <p>Die Videos waren durchweg klar, strukturiert und hilfreich. Ich habe richtig viel mitgenommen. Ich empfehle den Kurs wirklich zu 100 %.</p>
+      </blockquote><figcaption class="who">Leo, 18 Jahre</figcaption></figure>
+      <figure class="testi-card"><blockquote>
+        <p>Ich erlebe das Programm als sehr bereichernd. Ich war schnell im Thema und fand es super, wie verständlich alles erklärt wird und wie gut es sich im Alltag umsetzen lässt.</p>
+        <p>Mein Ziel ist es, meine emotionale Kapazität auszuweiten und zu stärken, damit mich das Feld, was mich in meinem Wunsch, mein Leben glücklich zu führen, nicht mehr blockiert. Ich habe das Gefühl, diesem Ziel jetzt schon viele Schritte näher gekommen zu sein.</p>
+      </blockquote><figcaption class="who">Silke, 54 Jahre</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 12 WISSENSCHAFT -->
+<section class="section-alt" id="wirkung">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Wissenschaftlich fundiert</span>
+      <h2>Was die Forschung <em>zeigt.</em></h2>
+      <p class="lede" style="margin-bottom:40px;">Dass sich dein Nervensystem trainieren lässt, ist keine These. Diese vier Studien stecken hinter dem Emotions-Gym.</p>
+    </div>
+    <div class="grid-4">
+      <article class="study"><span class="num">01</span><h3>Dein Nervensystem hält dich im Bekannten.</h3><p>Negative Erfahrungen wiegen nachweislich schwerer als positive. Deshalb fühlt sich Bekanntes, aber Unangenehmes oft sicherer an als Neues, das gut sein könnte.</p><cite>Baumeister et al., Review of General Psychology, 2001</cite></article>
+      <article class="study"><span class="num">02</span><h3>Was du nicht fühlen willst, bestimmt, was du nicht tust.</h3><p>Gefühle zu vermeiden, statt sie zuzulassen, gilt als einer der zentralen Mechanismen hinter Mustern, die uns von unseren Wünschen abhalten.</p><cite>Hayes et al., Journal of Consulting and Clinical Psychology, 1996</cite></article>
+      <article class="study"><span class="num">03</span><h3>Kapazität lässt sich trainieren wie ein Muskel.</h3><p>Nach 20 Tagen gezieltem Training verbesserte sich die Emotionsregulation messbar. Der Effekt war auch drei Monate später noch nachweisbar.</p><cite>Neuropsychological Rehabilitation, 2025</cite></article>
+      <article class="study"><span class="num">04</span><h3>Training wirkt bis in die Hirnnetzwerke.</h3><p>Nach gezieltem Training arbeiteten die Netzwerke für bewusste emotionale Kontrolle effizienter. Teilnehmende reagierten unter Druck bewusster.</p><cite>Schweizer et al., The Journal of Neuroscience, 2013</cite></article>
+    </div>
+  </div>
+</section>
+
+<!-- 13 FAQ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <span class="eyebrow">FAQ</span>
+    <h2>Bevor du startest: <em>die häufigsten Fragen.</em></h2>
+    <details class="faq-item" open><summary>Gibt es auch eine Monatsmitgliedschaft?</summary><p>Nein. Es braucht ein Minimum an Training, damit du Ergebnisse siehst, genau wie im Fitnessstudio. Deshalb startest du mit mindestens 3 Monaten. Du kannst aber monatlich in Raten zahlen, ohne Aufschlag.</p></details>
+    <details class="faq-item"><summary>Kann ich das Emotions-Gym erst testen?</summary><p>Ja. Die ersten 3 Tage sind kostenlos, die erste Zahlung wird erst danach fällig. Wenn es nicht passt, kündigst du innerhalb der 3 Tage über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>, und es wird nichts abgebucht.</p></details>
+    <details class="faq-item"><summary>Wie viel Zeit brauche ich? Ich habe nicht viel Zeit.</summary><p>Die Mindestdosis sind 7 Minuten am Tag: das tägliche Warm-up. Den Trainingsplan machst du in deinem Tempo. Regelmäßigkeit wirkt mehr als viele Einheiten am Stück.</p></details>
+    <details class="faq-item"><summary>Ich habe schon so viel gemacht. Warum jetzt noch das?</summary><p>Genau deshalb. Im Emotions-Gym geht es nicht mehr ums Verstehen, sondern ums Trainieren und Umsetzen. Du sammelst neue Erfahrungen, statt noch mehr Wissen.</p></details>
+    <details class="faq-item"><summary>Ich mache gerade Coaching oder Therapie. Passt das zusammen?</summary><p>Ja. Ein Coach oder Therapeut kann dich nicht jeden Tag begleiten, das Gym schon. Das eine ersetzt das andere nicht, es ergänzt es.</p></details>
+    <details class="faq-item"><summary>Was ist der Unterschied mit Personal Training?</summary><p>Du bekommst alles aus dem Emotions-Gym und zusätzlich jeden Monat eine Einzelstunde mit Julia oder Alexandra. Personal Training ist eine eigene Mitgliedschaft mit Aufpreis, die Preise siehst du oben. Das hilft besonders, wenn du dein Ziel noch nicht genau kennst oder dir das Umsetzen allein schwerfällt.</p></details>
+    <details class="faq-item"><summary>Wie funktioniert die Ratenzahlung?</summary><p>Ohne Aufschlag. Die 12-Monats-Mitgliedschaft zahlst du in 12 Monatsraten oder in 4 Raten alle 3 Monate, die 3-Monats-Mitgliedschaft in 3 Monatsraten. Die Raten gelten für die gesamte Mindestlaufzeit.</p></details>
+    <details class="faq-item"><summary>Was passiert nach der Mindestlaufzeit?</summary><p>Deine Mitgliedschaft läuft weiter, bis du kündigst. So kannst du einfach weitertrainieren. Die Details stehen in unseren <a href="/agb" class="textlink">AGB</a>.</p></details>
+    <details class="faq-item"><summary>Ersetzt das Emotions-Gym eine Therapie?</summary><p>Nein. Radical Sparks ist ein Trainingsprogramm, keine Psychotherapie. Du nimmst eigenverantwortlich teil. Wenn du gerade in einer akuten Krise bist, such dir bitte zuerst professionelle Unterstützung.</p></details>
+  </div>
+</section>
+
+<!-- 14 PERSÖNLICHER ABSCHLUSS -->
+<section class="section-alt">
+  <div class="wrap split">
+    <div class="photo"><img src="img/julia-alexandra.png" alt="Alexandra und Julia" loading="lazy"/></div>
+    <div>
+      <span class="eyebrow">Persönlich von Alexandra &amp; Julia</span>
+      <h2>Du musst nicht warten, bis es <em>nicht mehr anders geht.</em></h2>
+      <p>Wir wissen, wie es ist, viel zu verstehen und trotzdem an derselben Stelle stehen zu bleiben. Das Gym haben wir gebaut, weil uns genau das gefehlt hat: ein Ort zum Trainieren, Menschen, die mittrainieren, und jemand, der die Richtung kennt.</p>
+      <p>Wenn du spürst, dass mehr Verstehen dich nicht weiterbringt, dann fang an zu trainieren. Wir freuen uns auf dich.</p>
+      <div class="btn-row" style="margin-top:8px;"><a href="#preise" class="btn btn-primary">Mitgliedschaft wählen</a></div>
+      <p class="muted" style="margin-top:18px;">Für mehr Sicherheit in dir. Für Handeln trotz Angst. Für ein Leben, das sich nach dir anfühlt.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/>
+        <div class="footer-tagline">Das Fitnessstudio für emotionale Kapazität.</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/radicalsparks/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153.5.5.888 1.11 1.153 1.772.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg></a>
+          <a href="https://www.facebook.com/radicalsparks.official/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/></svg></a>
+          <a href="https://www.youtube.com/@RadicalSparks" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3.02 3.02 0 002.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Radical Sparks</h4><ul><li><a href="emotions-gym.html">Emotions-Gym</a></li><li><a href="kostenloses-gefuehlstraining.html">Kostenloses Gefühlstraining</a></li><li><a href="podcast.html">Podcast</a></li></ul></div>
+        <div><h4>Über uns</h4><ul><li><a href="ueber-uns.html">Alexandra &amp; Julia</a></li><li><a href="mailto:hallo@radicalsparks.de">Kontakt</a></li></ul></div>
+        <div><h4>Rechtliches</h4><ul><li><a href="/impressum">Impressum</a></li><li><a href="/datenschutz">Datenschutz</a></li><li><a href="/agb">AGB</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">Radical Sparks ist ein Trainingsprogramm und ersetzt keine therapeutische oder medizinische Beratung. Bei medizinischen oder psychischen Problemen solltest du professionelle Hilfe in Anspruch nehmen. <a href="/disclaimer">Mehr Informationen hier.</a></div>
+    <div class="footer-bottom"><span>© 2026 Radical Sparks. Alle Rechte vorbehalten.</span><span>hallo@radicalsparks.de</span></div>
+  </div>
+</footer>
+
+<div id="rs-cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="rs-cb-inner">
+    <p>Wir nutzen Cookies, um die Seite zu verbessern und Werbung zu messen (Google Analytics, Meta-Pixel). Mehr dazu in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+    <div class="rs-cb-btns"><button class="rs-cb-accept" onclick="rsAcceptCookies()">Akzeptieren</button><button class="rs-cb-decline" onclick="rsDeclineCookies()">Ablehnen</button></div>
+  </div>
+</div>
+
+<script>
+function rsToggleMenu(){ var l = document.getElementById('navLinks'), t = document.getElementById('navToggle'); var o = l.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+function rsCloseMenu(){ document.getElementById('navLinks').classList.remove('open'); document.getElementById('navToggle').setAttribute('aria-expanded', 'false'); }
+(function(){ try { if (!localStorage.getItem('rs_cookie_consent')) document.getElementById('rs-cookie-banner').style.display = 'block'; } catch(e) {} })();
+function rsAcceptCookies(){ try { localStorage.setItem('rs_cookie_consent','accepted'); } catch(e) {} document.getElementById('rs-cookie-banner').style.display = 'none'; if (typeof rsLoadGA4 === 'function') rsLoadGA4(); if (typeof rsLoadMetaPixel === 'function') rsLoadMetaPixel(); }
+function rsDeclineCookies(){ try { localStorage.setItem('rs_cookie_consent','declined'); } catch(e) {} document.getElementById('rs-cookie-banner').style.display = 'none'; }
+
+// ---- Preise (Originalpreise, Stripe) ----
+// Stripe-Zahlungslinks zu den Originalpreisen (live, mit 3 Tagen Testphase).
+// Fehlt ein Link (null), öffnet der Button eine vorausgefüllte E-Mail.
+var RS_PRICES = {
+  gym: { name: 'Emotions-Gym',
+    '12': { full: 450, monthly: 37.50, quarterly: 112.50 },
+    '3':  { full: 170, monthly: 56.66 } },
+  pt:  { name: 'Emotions-Gym + Personal Training',
+    '12': { full: 3000, monthly: 250, quarterly: 750 },
+    '3':  { full: 1200, monthly: 400 } }
+};
+var RS_LINKS = {
+  gym: { '12': { full: 'https://buy.stripe.com/dRm7sLdXI6EKekm6f7b3q07', monthly: 'https://buy.stripe.com/aFa3cv06S0gmdgi46Zb3q08', quarterly: 'https://buy.stripe.com/9B67sL5rcfbgcce5b3b3q09' },
+         '3':  { full: 'https://buy.stripe.com/6oU00j3j48MSekmfPHb3q0a', monthly: 'https://buy.stripe.com/dRmcN5aLw3sy3FI6f7b3q0b' } },
+  pt:  { '12': { full: 'https://buy.stripe.com/8x2dR98Do4wCcce7jbb3q0c', monthly: 'https://buy.stripe.com/aFa5kD5rc0gmdgi32Vb3q0d', quarterly: 'https://buy.stripe.com/9B600jg5Q8MS7VY46Zb3q0e' },
+         '3':  { full: 'https://buy.stripe.com/eVq5kD2f05AG6RUgTLb3q0f', monthly: 'https://buy.stripe.com/14AcN5g5Qfbg1xAgTLb3q0g' } }
+};
+function rsEur(v){ return v.toLocaleString('de-DE', { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }) + '\u00a0€'; }
+var rsTerm = '12';
+function rsPayOptions(p, term){
+  var o = [['full', 'Einmalig', rsEur(p.full)]];
+  if (term === '12') { o.push(['monthly', '12 Monatsraten', '12 × ' + rsEur(p.monthly)]); o.push(['quarterly', '4 Raten, alle 3 Monate', '4 × ' + rsEur(p.quarterly)]); }
+  else { o.push(['monthly', '3 Monatsraten', '3 × ' + rsEur(p.monthly)]); }
+  return o;
+}
+function rsRenderCard(card){
+  var plan = card.getAttribute('data-plan'), p = RS_PRICES[plan][rsTerm];
+  card.querySelector('[data-slot=term]').textContent = rsTerm === '12' ? '12 Monate Mitgliedschaft' : '3 Monate Mitgliedschaft';
+  card.querySelector('[data-slot=price]').textContent = rsEur(p.full);
+  card.querySelector('[data-slot=per]').textContent = (rsTerm === '12' ? 'Das sind ' : 'Das sind rund ') + rsEur(p.monthly) + ' im Monat.';
+  var fs = card.querySelector('[data-slot=pay]');
+  fs.innerHTML = rsPayOptions(p, rsTerm).map(function(o, i){
+    return '<label class="pay-option"><input type="radio" name="pay-' + plan + '" value="' + o[0] + '"' + (i === 0 ? ' checked' : '') + '/><span>' + o[1] + '</span><span class="amt">' + o[2] + '</span></label>';
+  }).join('');
+  fs.querySelectorAll('input').forEach(function(r){ r.addEventListener('change', function(){ rsSyncCta(card); }); });
+  rsSyncCta(card);
+}
+function rsSyncCta(card){
+  var plan = card.getAttribute('data-plan');
+  var pay = (card.querySelector('input[type=radio]:checked') || {}).value || 'full';
+  var link = RS_LINKS[plan][rsTerm][pay];
+  var cta = card.querySelector('.price-cta');
+  if (link) { cta.href = link; }
+  else {
+    var label = RS_PRICES[plan].name + ', ' + rsTerm + ' Monate, ' + ({ full: 'Einmalzahlung', monthly: 'monatliche Raten', quarterly: 'vierteljährliche Raten' })[pay];
+    cta.href = 'mailto:hallo@radicalsparks.de?subject=' + encodeURIComponent('Mitgliedschaft: ' + label) + '&body=' + encodeURIComponent('Hallo Alexandra und Julia,\n\nich möchte gern starten: ' + label + '.\n\n');
+  }
+  cta.setAttribute('data-plan', plan); cta.setAttribute('data-pay', pay);
+}
+document.querySelectorAll('.term-switch button').forEach(function(b){
+  b.addEventListener('click', function(){
+    rsTerm = b.getAttribute('data-term');
+    document.querySelectorAll('.term-switch button').forEach(function(x){ x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+    document.querySelectorAll('.price-card').forEach(rsRenderCard);
+  });
+});
+document.querySelectorAll('.price-card').forEach(rsRenderCard);
+document.querySelectorAll('.price-cta').forEach(function(cta){
+  cta.addEventListener('click', function(){
+    var plan = cta.getAttribute('data-plan'), v = RS_PRICES[plan][rsTerm].full;
+    if (typeof fbq === 'function') { fbq('track', 'InitiateCheckout', { value: v, currency: 'EUR', content_name: plan + '_' + rsTerm + 'm' }); }
+    if (typeof gtag === 'function') { gtag('event', 'begin_checkout', { value: v, currency: 'EUR', items: [{ item_id: plan + '_' + rsTerm + 'm', item_variant: cta.getAttribute('data-pay') }] }); }
+  });
+});
+
+document.querySelectorAll('.video-facade[data-yt]').forEach(function(b){
+  b.addEventListener('click', function(){
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.title = 'Radical Sparks Video';
+    b.replaceWith(f);
+  });
+});
+
+</script>
+</body>
+</html>
