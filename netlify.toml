@@ -99,3 +99,24 @@
   to = "/kostenloses-gefuehlstraining.html"
   status = 302
   force = true
+
+# Alte/falsche Adressen, die Google als 404 meldet (Search Console 26.10.2026) -> kostenloses Gefühlstraining
+[[redirects]]
+  from = "/webinar-nervensystem-training_2.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/webinar-nervensystem-training_2"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenlose-gefühlssession.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenlose-gef%C3%BChlssession.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
