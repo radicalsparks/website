@@ -120,3 +120,8 @@
   from = "/kostenlose-gef%C3%BChlssession.html"
   to = "/kostenloses-gefuehlstraining.html"
   status = 301
+
+[[redirects]]
+  from = "/emotionstrainingRadical"
+  to = "/emotions-gym"
+  status = 301
