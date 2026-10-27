@@ -356,7 +356,7 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);}
         btn.disabled = false; btn.textContent = 'Jetzt kündigen';
         if (/Bitte/.test(ex.message)) { showError('<p style="margin:0;">' + esc(ex.message) + '</p>'); return; }
         var body = 'Hiermit kündige ich folgenden Vertrag:\n\nName: ' + data.name + '\nE-Mail: ' + data.email + '\nVertrag: ' + document.getElementById('cfContract').selectedOptions[0].text + '\nVertragsnr./Bestelldatum: ' + (data.ref || '-') + '\nArt: ' + (data.type === 'ordentlich' ? 'Ordentliche Kündigung' : 'Außerordentliche Kündigung, Grund: ' + data.reason) + '\nZeitpunkt: ' + (data.timing === 'asap' ? 'nächstmöglich' : data.date) + '\n\nBitte bestätigt mir den Eingang und das Vertragsende.';
-        var href = 'mailto:hallo@radicalsparks.de?subject=' + encodeURIComponent('Kündigung ' + data.name) + '&body=' + encodeURIComponent(body);
+        var href = 'mailto:hello@radical-sparks.com?subject=' + encodeURIComponent('Kündigung ' + data.name) + '&body=' + encodeURIComponent(body);
         showError('<p style="margin:0 0 8px;"><strong>Die Kündigung konnte gerade nicht automatisch übermittelt werden.</strong></p><p style="margin:0;">Bitte schick sie uns per E-Mail. Der Text ist schon vorbereitet: <a href="' + href + '" style="color:var(--yellow);">Kündigung per E-Mail senden</a>.</p>');
       });
   });

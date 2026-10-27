@@ -11,7 +11,7 @@
 //   BREVO_API_KEY        (vorhanden, wird auch von brevo.js genutzt)
 //   STRIPE_SECRET_KEY    (Restricted Key: Customers lesen, Subscriptions schreiben) – optional
 //   BREVO_SENDER_EMAIL   (in Brevo verifizierte Absenderadresse, Standard: hello@radical-sparks.com)
-//   CANCEL_NOTIFY_EMAIL  (Team-Postfach, Standard: hallo@radicalsparks.de)
+//   CANCEL_NOTIFY_EMAIL  (Team-Postfach, Standard: hello@radical-sparks.com)
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -126,7 +126,7 @@ exports.handler = async (event) => {
   const BREVO_KEY = process.env.BREVO_API_KEY;
   const STRIPE_KEY = process.env.STRIPE_SECRET_KEY;
   const SENDER = process.env.BREVO_SENDER_EMAIL || 'hello@radical-sparks.com';
-  const TEAM = process.env.CANCEL_NOTIFY_EMAIL || 'hallo@radicalsparks.de';
+  const TEAM = process.env.CANCEL_NOTIFY_EMAIL || 'hello@radical-sparks.com';
   if (!BREVO_KEY) return json(500, { error: 'Server misconfigured' });
 
   let form;
