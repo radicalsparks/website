@@ -10,7 +10,6 @@
 </script>
 <title>Das Emotions-Gym · Mitgliedschaft · Radical Sparks</title>
 <meta name="description" content="Trainiere die Gefühle, die dich bisher zurückhalten. Trainingsplan, tägliches Warm-up, Community und Live-Calls. 3 oder 12 Monate, auf Wunsch mit Personal Training."/>
-<meta name="robots" content="noindex"/>
 <link rel="canonical" href="https://www.radical-sparks.com/emotions-gym"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Das Emotions-Gym · Mitgliedschaft · Radical Sparks"/>
@@ -336,6 +335,14 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
 .step-no { display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: var(--yellow); color: #16231d; font-weight: 800; align-items: center; justify-content: center; margin-bottom: 14px; }
 .step-time { display: block; margin-top: 14px; font-size: 13px; color: var(--orange); font-weight: 600; }
 
+
+/* Fotostreifen (Wanda, 26.10.2026) */
+.photo-strip{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:0;margin:0;padding:0;}
+.photo-strip figure{margin:0;position:relative;aspect-ratio:3/4;overflow:hidden;background:#16231d;}
+.photo-strip img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05);}
+.photo-strip figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,30,24,.65),rgba(18,30,24,0) 45%);pointer-events:none;}
+.photo-strip figcaption{position:absolute;left:18px;bottom:16px;z-index:1;color:#ffde59;font-family:"Fraunces",Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(17px,1.8vw,22px);line-height:1.2;}
+@media (max-width:760px){.photo-strip{grid-template-columns:repeat(2,1fr);}.photo-strip[style*="--cols:3"] figure:first-child{grid-column:span 2;aspect-ratio:4/3;}.photo-strip[style*="--cols:3"] figure:first-child img{object-position:50% 80%;}.photo-strip figure{aspect-ratio:4/5;}.photo-strip figcaption{left:12px;bottom:10px;}}
 </style>
 </head>
 <body>
@@ -359,8 +366,8 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <h1>Du hast viel über dich verstanden. <em>Und bist trotzdem nicht da, wo du sein möchtest.</em></h1>
-      <p class="lede">Das Fitnessstudio für emotionale Kapazität — wissenschaftlich fundiertes Training für dein Nervensystem. Mehr Selbstbewusstsein, mehr Handlungsspielraum, mehr von den Gefühlen, die du dir wünschst. Mit einem Trainingsplan für dein Nervensystem und echten Trainerinnen an deiner Seite.</p>
+      <h1>Du hast alles über dich verstanden. Du weißt, was du willst. <em>Warum lebst du es noch nicht?</em></h1>
+      <p class="lede">Das Gym für emotionale Kapazität: Mit Selbstreflexion, Bewegung, Hypnose und Gemeinschaft trainierst du, deine Gefühle zu halten, statt ihnen auszuweichen. So kommst du Schritt für Schritt ins Handeln, mit einem klaren Trainingsplan und echten Trainerinnen an deiner Seite.</p>
       <a href="#bonus" class="hero-bonus"><b>Bonus</b><span>30 Min. individueller Check-in mit Julia zum Kursstart</span></a>
       <div class="btn-row">
         <a href="#preise" class="btn btn-primary">Mitgliedschaft wählen</a>
@@ -375,7 +382,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     </div>
     <div class="hero-visual">
       <div class="hero-glow"></div>
-      <div class="hero-photo"><img src="img/willkommen-julia-alexandra.jpg" alt="Julia und Alexandra heißen dich im Emotions-Gym willkommen"/></div>
+      <div class="hero-photo"><img src="img/foto-julia-alexandra-nah.jpg" alt="Julia und Alexandra sitzen lachend nebeneinander vor einer Steinmauer"/></div>
     </div>
   </div>
 </section>
@@ -385,9 +392,9 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
   <div class="wrap narrow">
     <span class="eyebrow">Ehrlich gesagt</span>
     <h2>Genug <em>verstanden.</em></h2>
-    <p>Vielleicht hast du schon vieles probiert: Therapie, Coaching, Bücher, Podcasts. Du kennst deine Muster und kannst sie erklären. Und trotzdem landest du immer wieder an derselben Stelle.</p>
-    <p>Das ist kein fehlendes Mindset. Dein Nervensystem sucht sich nicht das Beste für dich aus, sondern das Bekannte. <strong style="color:var(--text);">Welche Gefühle du vermeidest, entscheidet, welche Handlungen du vermeidest.</strong></p>
-    <p>Damit sich wirklich etwas verändert, muss dein Nervensystem mitmachen. Genau da setzt das Emotions-Gym an: nicht mit noch mehr Wissen, sondern mit Training.</p>
+    <p>Vielleicht hast du schon vieles probiert: Therapie, Coaching, Bücher, Podcasts. Du kennst deine Muster und kannst sie erklären. Und trotzdem sagst du wieder Ja, obwohl du Nein meinst. Schiebst den nächsten Schritt auf. Landest in Beziehungen am gleichen Punkt.</p>
+    <p>Das liegt nicht an fehlendem Willen. Dein Körper wählt das Bekannte, auch wenn es dir nicht guttut. <strong style="color:var(--text);">Welche Gefühle du vermeidest, entscheidet, welche Handlungen du vermeidest.</strong></p>
+    <p>Damit sich wirklich etwas verändert, muss dein Körper mitmachen. Genau da setzt das Emotions-Gym an: mit Training statt mit noch mehr Wissen.</p>
   </div>
 </section>
 
@@ -397,20 +404,27 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     <div class="center">
       <span class="eyebrow">Die Methode</span>
       <h2>Drei Richtungen, <em>ein Training.</em></h2>
-      <p class="lede" style="margin-bottom:40px;">Das Emotions-Gym trainiert dein Nervensystem in drei Richtungen, die ineinandergreifen.</p>
+      <p class="lede" style="margin-bottom:40px;">Das Emotions-Gym trainiert dein Nervensystem, also wie viel Gefühl du halten kannst, in drei Richtungen, die ineinandergreifen.</p>
     </div>
     <div class="grid-3">
       <div class="card solid"><span class="num">01</span><h3>Regulation</h3><p>Du lernst, dich in Sekunden sicher zu fühlen. Atem, Körper, Orientierung. Das ist die Basis, auf der Training überhaupt erst möglich wird.</p></div>
       <div class="card solid"><span class="num">02</span><h3>Schwierige Gefühle halten</h3><p>Angst, Scham, Unsicherheit: Du gibst ihnen Raum, bis sie zu Ende gefühlt sind, statt auszuweichen. So bleibst du handlungsfähig.</p></div>
       <div class="card solid"><span class="num">03</span><h3>Wunschgefühle trainieren</h3><p>Nähe, Freude, Stolz und Verbundenheit kommen selten von allein. Im täglichen Warm-up trainierst du sie gezielt.</p></div>
     </div>
-    <p class="center" style="margin:32px auto 0;max-width:720px;">Jede Richtung wirkt für sich. Zusammen verschieben sie Schritt für Schritt deine Kapazitätsgrenze.</p>
+    <p class="center" style="margin:32px auto 0;max-width:720px;">Jede Richtung wirkt für sich. Zusammen erweitern sie Schritt für Schritt, was du fühlen kannst. Und was du fühlen kannst, kannst du leben.</p>
     <div class="soundbite" style="max-width:760px;margin:32px auto 0;">
-      <p>„Das Training hat mir geholfen, meine Gefühle bewusster wahrzunehmen und mich im Aushalten zu üben, statt sofort zu reagieren. <em>Es macht mich handlungsfähiger und bringt Ruhe im Familienalltag.</em>“</p>
+      <p>„Das Training hat mir geholfen, meine Gefühle bewusster wahrzunehmen und mich im ‚Aushalten‘ zu üben, statt sofort zu reagieren. <em>Es macht mich handlungsfähiger und bringt Ruhe im Familienalltag.</em>“</p>
       <span class="src">Tamara, 43 Jahre</span>
     </div>
   </div>
 </section>
+
+<div class="photo-strip" style="--cols:4">
+  <figure><img src="img/foto-trainingsziel-schreiben.jpg" alt="Hände schreiben in ein Notizbuch, zwischen Lavendelzweigen" loading="lazy" width="732" height="1100"/><figcaption>Selbstreflexion</figcaption></figure>
+  <figure><img src="img/foto-julia-training.jpg" alt="Julia beim Krafttraining unter freiem Himmel" loading="lazy" width="732" height="1100"/><figcaption>Bewegung</figcaption></figure>
+  <figure><img src="img/foto-alexandra-gras-kopfhoerer.jpg" alt="Alexandra liegt mit Kopfhörern und geschlossenen Augen im Gras" loading="lazy" width="732" height="1100"/><figcaption>Hypnose</figcaption></figure>
+  <figure><img src="img/foto-julia-alexandra-jubel.jpg" alt="Julia und Alexandra sitzen auf einer Steinmauer, Julia reißt lachend die Arme hoch" loading="lazy" width="1600" height="1067" style="object-position:48% 50%"/><figcaption>Gemeinschaft</figcaption></figure>
+</div>
 
 <!-- 4 VORTEILE -->
 <section class="section-alt" id="vorteile">
@@ -418,7 +432,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     <div class="center">
       <span class="eyebrow">Deine Vorteile</span>
       <h2>Wissenschaft trifft auf <em>echtes Training.</em></h2>
-      <p class="lede" style="margin-bottom:44px;">Im Emotions-Gym steckt kein Motivationsspruch und keine Wohlfühl-Übung ohne Richtung. Sondern das, was Psychologie und Neurowissenschaft über Veränderung wissen, übersetzt in ein Training, das in deinen Alltag passt.</p>
+      <p class="lede" style="margin-bottom:44px;">Im Emotions-Gym steckt, was Psychologie und Neurowissenschaft über Veränderung wissen, übersetzt in ein Training, das in deinen Alltag passt.</p>
     </div>
     <div class="grid-2 benefits">
       <article class="benefit">
@@ -439,13 +453,13 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
         <span class="num">03</span>
         <h3>Die guten Gefühle bleiben länger.</h3>
         <p>Freude, Stolz und Nähe sind nicht mehr kaum da und schon wieder weg. Du kannst sie halten und bewusst mehr davon in dein Leben holen.</p>
-        <p class="why"><strong>Warum es wirkt:</strong> Negative Erfahrungen wiegen für unser Gehirn nachweislich schwerer als positive. Deshalb kommen die schönen Gefühle selten von allein. Im täglichen Warm-up trainierst du sie gezielt, bis dein Nervensystem sie kennt.</p>
+        <p class="why"><strong>Warum es wirkt:</strong> Negative Erfahrungen wiegen für unser Gehirn nachweislich schwerer als positive. Deshalb kommen die schönen Gefühle selten von allein. Im täglichen Warm-up trainierst du sie gezielt, bis sie dir vertraut sind.</p>
         <cite>Baumeister et al., Review of General Psychology, 2001</cite>
       </article>
       <article class="benefit">
         <span class="num">04</span>
         <h3>Die Veränderung bleibt.</h3>
-        <p>Kein kurzer Aha-Moment, der nach einer Woche verpufft. Deine Kapazität wächst Schritt für Schritt, und was du trainiert hast, bleibt.</p>
+        <p>Schritt für Schritt kannst du mehr fühlen, und was du trainiert hast, bleibt.</p>
         <p class="why"><strong>Warum es wirkt:</strong> In einer Studie verbesserte sich die Emotionsregulation nach 20 Tagen gezieltem Training messbar, und der Effekt war drei Monate später noch nachweisbar. Genau deshalb setzt das Gym auf Wiederholung statt auf Einsicht.</p>
         <cite>Neuropsychological Rehabilitation, 2025</cite>
       </article>
@@ -486,11 +500,11 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     <div class="center">
       <span class="eyebrow">Keine anonyme App</span>
       <h2>Ein Raum, der dir <em>Sicherheit</em> gibt.</h2>
-      <p class="lede" style="margin-bottom:40px;">Im Emotions-Gym wirst du nicht mit Videos allein gelassen. Du trainierst mit Menschen, die du kennst.</p>
+      <p class="lede" style="margin-bottom:40px;">Im Emotions-Gym trainierst du mit Menschen, die du kennst: mit Alexandra und Julia und einer Gemeinschaft, die mittrainiert.</p>
     </div>
     <div class="grid-3">
       <div class="card"><h3>Trainerinnen, die du kennst</h3><p>Alexandra und Julia führen dich durch jede Einheit. Sie haben das Gym gebaut und den Weg selbst trainiert.</p></div>
-      <div class="card"><h3>Die richtige Dosis</h3><p>Niemand legt im ersten Training 100 Kilo auf. Du gehst nie schneller, als dein Nervensystem mitkommt.</p></div>
+      <div class="card"><h3>Die richtige Dosis</h3><p>Niemand legt im ersten Training 100 Kilo auf. Du gehst nie schneller, als dein Körper mitkommt.</p></div>
       <div class="card"><h3>Nicht allein dranbleiben</h3><p>Der Moment, in dem du aufhören willst, ist oft der, in dem es wirkt. Genau dann helfen Community, Calls und Menschen, die mittrainieren.</p></div>
     </div>
   </div>
@@ -508,7 +522,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
       <div>
         <span class="bonus-tag">Dein Bonus zum Kursstart</span>
         <h3>30 Minuten individueller Check-in <em>mit Julia.</em></h3>
-        <p>Zum Kursstart nimmt sich Julia 30 Minuten nur für dich. Ihr schaut gemeinsam, wo du gerade stehst und worauf es in deinem Training ankommt. So startest du nicht allein, sondern mit einem klaren ersten Schritt. <strong>In jeder Mitgliedschaft inklusive.</strong></p>
+        <p>Zum Kursstart nimmt sich Julia 30 Minuten nur für dich. Ihr schaut gemeinsam, wo du gerade stehst und worauf es in deinem Training ankommt. So startest du mit einem klaren ersten Schritt. <strong>In jeder Mitgliedschaft inklusive.</strong></p>
       </div>
     </div>
     <div class="grid-3">
@@ -523,11 +537,11 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
 <!-- 7a PERSONAL TRAINING: WARUM -->
 <section class="section-alt" id="personal-training">
   <div class="wrap split">
-    <div class="photo"><img src="img/julia-alexandra-hero.jpg" alt="Julia und Alexandra, deine Personal Trainerinnen" loading="lazy"/></div>
+    <div class="photo"><img src="img/foto-julia-alexandra-mauer.jpg" alt="Julia und Alexandra, deine Personal Trainerinnen, im Garten auf einer Steinmauer" loading="lazy"/></div>
     <div>
       <span class="eyebrow">Personal Training</span>
       <h2>Manche trainieren lieber allein. <em>Andere mit Personal Trainerin.</em></h2>
-      <p>Mit unserer ersten Kohorte haben wir gemerkt: Es gibt unterschiedliche Lerntypen. Manchen fällt es leicht, alles allein zu machen. Andere brauchen ein bisschen mehr Unterstützung. Wie im normalen Fitnessstudio auch.</p>
+      <p>Mit unserer ersten Kohorte haben wir gemerkt: Es gibt unterschiedliche Lerntypen. Manchen fällt es leicht, alles allein zu machen. Andere brauchen ein bisschen mehr Unterstützung. Wie im normalen Gym auch.</p>
       <p>Du weißt selbst am besten, wie du lernst. Wenn du persönliche Begleitung willst, gibt es das Emotions-Gym mit Personal Training.</p>
       <p><strong style="color:var(--text);">Der Vorteil: Wir sind deine Personal Trainerinnen.</strong> Wir haben das Gym gebaut, wissen, worum es geht, und sind den Weg selbst gegangen.</p>
     </div>
@@ -588,7 +602,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
         <ul class="check-list small">
           <li class="bonus-li"><strong>Bonus:</strong> 30 Min. individueller Check-in mit Julia zum Kursstart</li>
           <li>Eingangscheck und drei Kurse: Trainingsziel &amp; Klarheit, Nervensystem trainieren, Umsetzung</li>
-          <li>Tägliches Warm-up für dein Nervensystem</li>
+          <li>Tägliches Warm-up für deine Gefühle</li>
           <li>Monatliche Live-Community-Calls</li>
           <li>Community-Bereich</li>
           <li>Zugriff auf alle neuen Themenkurse, zum Beispiel zu Beziehungen, Geld und Beruf</li>
@@ -711,7 +725,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
       <p class="lede" style="margin-bottom:40px;">Dass sich dein Nervensystem trainieren lässt, ist keine These. Diese vier Studien stecken hinter dem Emotions-Gym.</p>
     </div>
     <div class="grid-4">
-      <article class="study"><span class="num">01</span><h3>Dein Nervensystem hält dich im Bekannten.</h3><p>Negative Erfahrungen wiegen nachweislich schwerer als positive. Deshalb fühlt sich Bekanntes, aber Unangenehmes oft sicherer an als Neues, das gut sein könnte.</p><cite>Baumeister et al., Review of General Psychology, 2001</cite></article>
+      <article class="study"><span class="num">01</span><h3>Dein Körper hält dich im Bekannten.</h3><p>Negative Erfahrungen wiegen nachweislich schwerer als positive. Deshalb fühlt sich Bekanntes, aber Unangenehmes oft sicherer an als Neues, das gut sein könnte.</p><cite>Baumeister et al., Review of General Psychology, 2001</cite></article>
       <article class="study"><span class="num">02</span><h3>Was du nicht fühlen willst, bestimmt, was du nicht tust.</h3><p>Gefühle zu vermeiden, statt sie zuzulassen, gilt als einer der zentralen Mechanismen hinter Mustern, die uns von unseren Wünschen abhalten.</p><cite>Hayes et al., Journal of Consulting and Clinical Psychology, 1996</cite></article>
       <article class="study"><span class="num">03</span><h3>Kapazität lässt sich trainieren wie ein Muskel.</h3><p>Nach 20 Tagen gezieltem Training verbesserte sich die Emotionsregulation messbar. Der Effekt war auch drei Monate später noch nachweisbar.</p><cite>Neuropsychological Rehabilitation, 2025</cite></article>
       <article class="study"><span class="num">04</span><h3>Training wirkt bis in die Hirnnetzwerke.</h3><p>Nach gezieltem Training arbeiteten die Netzwerke für bewusste emotionale Kontrolle effizienter. Teilnehmende reagierten unter Druck bewusster.</p><cite>Schweizer et al., The Journal of Neuroscience, 2013</cite></article>
@@ -724,7 +738,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
   <div class="wrap narrow">
     <span class="eyebrow">FAQ</span>
     <h2>Bevor du startest: <em>die häufigsten Fragen.</em></h2>
-    <details class="faq-item" open><summary>Gibt es auch eine Monatsmitgliedschaft?</summary><p>Nein. Es braucht ein Minimum an Training, damit du Ergebnisse siehst, genau wie im Fitnessstudio. Deshalb startest du mit mindestens 3 Monaten. Du kannst aber monatlich in Raten zahlen, ohne Aufschlag.</p></details>
+    <details class="faq-item" open><summary>Gibt es auch eine Monatsmitgliedschaft?</summary><p>Nein. Es braucht ein Minimum an Training, damit du Ergebnisse siehst, genau wie im Gym. Deshalb startest du mit mindestens 3 Monaten. Du kannst aber monatlich in Raten zahlen, ohne Aufschlag.</p></details>
     <details class="faq-item"><summary>Kann ich das Emotions-Gym erst testen?</summary><p>Ja. Die ersten 3 Tage sind kostenlos, die erste Zahlung wird erst danach fällig. Wenn es nicht passt, kündigst du innerhalb der 3 Tage über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>, und es wird nichts abgebucht.</p></details>
     <details class="faq-item"><summary>Wie viel Zeit brauche ich? Ich habe nicht viel Zeit.</summary><p>Die Mindestdosis sind 7 Minuten am Tag: das tägliche Warm-up. Den Trainingsplan machst du in deinem Tempo. Regelmäßigkeit wirkt mehr als viele Einheiten am Stück.</p></details>
     <details class="faq-item"><summary>Ich habe schon so viel gemacht. Warum jetzt noch das?</summary><p>Genau deshalb. Im Emotions-Gym geht es nicht mehr ums Verstehen, sondern ums Trainieren und Umsetzen. Du sammelst neue Erfahrungen, statt noch mehr Wissen.</p></details>
@@ -746,7 +760,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
       <p>Wir wissen, wie es ist, viel zu verstehen und trotzdem an derselben Stelle stehen zu bleiben. Das Gym haben wir gebaut, weil uns genau das gefehlt hat: ein Ort zum Trainieren, Menschen, die mittrainieren, und jemand, der die Richtung kennt.</p>
       <p>Wenn du spürst, dass mehr Verstehen dich nicht weiterbringt, dann fang an zu trainieren. Wir freuen uns auf dich.</p>
       <div class="btn-row" style="margin-top:8px;"><a href="#preise" class="btn btn-primary">Mitgliedschaft wählen</a></div>
-      <p class="muted" style="margin-top:18px;">Für mehr Sicherheit in dir. Für Handeln trotz Angst. Für ein Leben, das sich nach dir anfühlt.</p>
+      <p class="muted" style="margin-top:18px;">Für mehr Sicherheit in dir. Für Handeln trotz Angst. Für mehr Leben. Hol dir deinen Spark zurück.</p>
     </div>
   </div>
 </section>
@@ -758,7 +772,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     <div class="footer-top">
       <div class="footer-logo">
         <img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/>
-        <div class="footer-tagline">Das Fitnessstudio für emotionale Kapazität.</div>
+        <div class="footer-tagline">Das Gym für emotionale Kapazität.<br/>Was du fühlen kannst, kannst du leben.<br/>Hol dir deinen Spark zurück.</div>
         <div class="footer-social">
           <a href="https://www.instagram.com/radicalsparks/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153.5.5.888 1.11 1.153 1.772.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg></a>
           <a href="https://www.facebook.com/radicalsparks.official/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/></svg></a>
@@ -767,12 +781,12 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
       </div>
       <div class="footer-cols">
         <div><h4>Radical Sparks</h4><ul><li><a href="emotions-gym.html">Emotions-Gym</a></li><li><a href="kostenloses-gefuehlstraining.html">Kostenloses Gefühlstraining</a></li><li><a href="podcast.html">Podcast</a></li></ul></div>
-        <div><h4>Über uns</h4><ul><li><a href="ueber-uns.html">Alexandra &amp; Julia</a></li><li><a href="mailto:hallo@radicalsparks.de">Kontakt</a></li></ul></div>
+        <div><h4>Über uns</h4><ul><li><a href="ueber-uns.html">Alexandra &amp; Julia</a></li><li><a href="mailto:hello@radical-sparks.com">Kontakt</a></li></ul></div>
         <div><h4>Rechtliches</h4><ul><li><a href="/impressum">Impressum</a></li><li><a href="/datenschutz">Datenschutz</a></li><li><a href="/agb">AGB</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></div>
       </div>
     </div>
     <div class="footer-disclaimer">Radical Sparks ist ein Trainingsprogramm und ersetzt keine therapeutische oder medizinische Beratung. Bei medizinischen oder psychischen Problemen solltest du professionelle Hilfe in Anspruch nehmen. <a href="/disclaimer">Mehr Informationen hier.</a></div>
-    <div class="footer-bottom"><span>© 2026 Radical Sparks. Alle Rechte vorbehalten.</span><span>hallo@radicalsparks.de</span></div>
+    <div class="footer-bottom"><span>© 2026 Radical Sparks. Alle Rechte vorbehalten.</span><span>hello@radical-sparks.com</span></div>
   </div>
 </footer>
 
@@ -835,7 +849,7 @@ function rsSyncCta(card){
   if (link) { cta.href = link; }
   else {
     var label = RS_PRICES[plan].name + ', ' + rsTerm + ' Monate, ' + ({ full: 'Einmalzahlung', monthly: 'monatliche Raten', quarterly: 'vierteljährliche Raten' })[pay];
-    cta.href = 'mailto:hallo@radicalsparks.de?subject=' + encodeURIComponent('Mitgliedschaft: ' + label) + '&body=' + encodeURIComponent('Hallo Alexandra und Julia,\n\nich möchte gern starten: ' + label + '.\n\n');
+    cta.href = 'mailto:hello@radical-sparks.com?subject=' + encodeURIComponent('Mitgliedschaft: ' + label) + '&body=' + encodeURIComponent('Hallo Alexandra und Julia,\n\nich möchte gern starten: ' + label + '.\n\n');
   }
   cta.setAttribute('data-plan', plan); cta.setAttribute('data-pay', pay);
 }

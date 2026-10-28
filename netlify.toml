@@ -60,3 +60,68 @@
   from = "/kostenloses-gefu%CC%88hlstraining"
   to = "/kostenloses-gefuehlstraining.html"
   status = 301
+
+# Abgelaufene Angebote (Wanda, 22.10.2026): Seiten bleiben im Repo, Besucher landen auf dem aktuellen Angebot.
+# Alter Online-Kurs "Emotionstraining" (Verkauf endete 29.09.2026) -> Emotions-Gym
+[[redirects]]
+  from = "/emotionstraining.html"
+  to = "/emotions-gym"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emotionstraining"
+  to = "/emotions-gym"
+  status = 301
+  force = true
+
+# Webinar Nervensystem-Training (22.09./29.09.2026 vorbei) -> kostenloses Gefühlstraining (302 = vorübergehend, falls es ein neues Webinar gibt)
+[[redirects]]
+  from = "/webinar-nervensystem-training.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/webinar-nervensystem-training"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/webinar-nervensystem-training-ads_1.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/webinar-nervensystem-training-ads_1"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 302
+  force = true
+
+# Alte/falsche Adressen, die Google als 404 meldet (Search Console 26.10.2026) -> kostenloses Gefühlstraining
+[[redirects]]
+  from = "/webinar-nervensystem-training_2.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/webinar-nervensystem-training_2"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenlose-gefühlssession.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/kostenlose-gef%C3%BChlssession.html"
+  to = "/kostenloses-gefuehlstraining.html"
+  status = 301
+
+[[redirects]]
+  from = "/emotionstrainingRadical"
+  to = "/emotions-gym"
+  status = 301

@@ -10,12 +10,12 @@
   if(localStorage.getItem('rs_cookie_consent')==='accepted'){rsLoadGA4();rsLoadMetaPixel();}
 </script>
 <title>Kostenloses Gefühlstraining – Radical Sparks</title>
-<meta name="description" content="Erlebe eine kostenlose geführte Gefühlssession von Radical Sparks: der erste Schritt, um Gefühle wirklich zu halten statt sie nur zu managen."/>
+<meta name="description" content="Dein erstes Training im Gym für emotionale Kapazität: 10 Minuten, geführt, kostenlos. Du probierst aus, wie es sich anfühlt, ein Gefühl zu halten."/>
 <link rel="canonical" href="https://www.radical-sparks.com/kostenloses-gefuehlstraining.html"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Radical Sparks"/>
 <meta property="og:title" content="Kostenloses Gefühlstraining – Radical Sparks"/>
-<meta property="og:description" content="Erlebe eine kostenlose geführte Gefühlssession von Radical Sparks: der erste Schritt, um Gefühle wirklich zu halten statt sie nur zu managen."/>
+<meta property="og:description" content="Dein erstes Training im Gym für emotionale Kapazität: 10 Minuten, geführt, kostenlos. Du probierst aus, wie es sich anfühlt, ein Gefühl zu halten."/>
 <meta property="og:image" content="https://www.radical-sparks.com/img/og-image.png"/>
 <meta property="og:url" content="https://www.radical-sparks.com/kostenloses-gefuehlstraining.html"/>
 <meta property="og:locale" content="de_DE"/>
@@ -104,7 +104,7 @@ section { padding: 120px 32px; }
 .qual h2 em { color: var(--gold); }
 .qual-list { list-style: none; padding: 0; margin: 0 0 40px; display: flex; flex-direction: column; gap: 16px; }
 .qual-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 1rem; color: var(--text); }
-.qual-list li::before { content: "—"; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.qual-list li::before { content: "•"; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
 .qual-promise { background: var(--white); border-left: 3px solid var(--gold); padding: 24px 28px; border-radius: var(--radius); font-size: 0.97rem; color: var(--text); line-height: 1.75; }
 /* MUSTER */
 .muster { background: var(--green); text-align: center; }
@@ -216,6 +216,14 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
 .rs-cb-accept{background:var(--gold);color:var(--green);}
 .rs-cb-decline{background:transparent;color:var(--muted);border-color:var(--line);}
 @media(max-width:600px){#rs-cookie-banner{padding:16px 20px;}.rs-cb-inner{flex-direction:column;align-items:flex-start;}.rs-cb-btns{width:100%;}.rs-cb-accept,.rs-cb-decline{flex:1;text-align:center;}}
+
+/* Fotostreifen (Wanda, 26.10.2026) */
+.photo-strip{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:0;margin:0;padding:0;}
+.photo-strip figure{margin:0;position:relative;aspect-ratio:3/4;overflow:hidden;background:#16231d;}
+.photo-strip img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05);}
+.photo-strip figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,30,24,.65),rgba(18,30,24,0) 45%);pointer-events:none;}
+.photo-strip figcaption{position:absolute;left:18px;bottom:16px;z-index:1;color:#ffde59;font-family:"Fraunces",Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(17px,1.8vw,22px);line-height:1.2;}
+@media (max-width:760px){.photo-strip{grid-template-columns:repeat(2,1fr);}.photo-strip[style*="--cols:3"] figure:first-child{grid-column:span 2;aspect-ratio:4/3;}.photo-strip[style*="--cols:3"] figure:first-child img{object-position:50% 80%;}.photo-strip figure{aspect-ratio:4/5;}.photo-strip figcaption{left:12px;bottom:10px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -236,18 +244,13 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
   <div class="nav">
     <a href="index.html" class="nav-logo"><img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/></a>
     <ul class="nav-links" id="navLinks">
-      <li class="has-dd" id="ddProdukte">
-        <span class="dd-toggle" onclick="toggleDropdown(event)">Produkte</span>
-        <ul class="dropdown">
-          <li><a href="emotionstraining.html" onclick="closeMenu()">Online Kurs Emotionstraining</a></li>
-          <li><a href="kostenloses-gefuehlstraining.html" onclick="closeMenu()">Kostenloses Gefühlstraining</a></li>
-        </ul>
-      </li>
+      <li><a href="emotions-gym.html" onclick="closeMenu()">Emotions-Gym</a></li>
+      <li><a href="kostenloses-gefuehlstraining.html" onclick="closeMenu()">Kostenloses Gefühlstraining</a></li>
       <li><a href="ueber-uns.html" onclick="closeMenu()">Über uns</a></li>
       <li><a href="podcast.html" onclick="closeMenu()">Podcast</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="https://buy.stripe.com/cNibJ14n86EKgsu46Zb3q00" class="btn-nav">Platz sichern</a>
+      <a href="kostenloses-gefuehlstraining.html" class="btn-nav">Kostenlos ausprobieren</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -263,8 +266,8 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
       <span class="sym">&#9675;</span> Gratis · 10 Minuten · Jetzt verfügbar
     </div>
     <span class="eyebrow eyebrow--gold">Radical Sparks · Kostenloses Gefühlstraining</span>
-    <h1>Dein erster Schritt<br>zurück — <em>zu dir.</em></h1>
-    <p class="hero-sub">In diesem kostenlosen Gefühlstraining lernst du, Kontakt zu deinem Körper aufzunehmen — und machst deine erste echte Erfahrung damit, was es bedeutet, wirklich zu fühlen. Nicht zu verstehen. Nicht zu analysieren. Zu fühlen.</p>
+    <h1>Dein erstes Training<br><em>im Gym für Gefühle.</em></h1>
+    <p class="hero-sub">Kopfhörer auf, hinsetzen, spüren. In 10 Minuten probierst du aus, wie es sich anfühlt, ein Gefühl zu halten, statt ihm auszuweichen. Geführt von Alexandra und Julia, kostenlos und von zu Hause aus.</p>
     <a href="#session-form" class="btn-primary">Jetzt gratis anhören →</a>
   </div>
 </section>
@@ -272,24 +275,24 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
 <!-- INSIGHT -->
 <section class="insight">
   <div class="container">
-    <h2>Du hast genug gelesen. Genug verstanden. Genug gehört.<br><em>Jetzt ist es Zeit zu fühlen.</em></h2>
+    <h2>Du hast genug gelesen. Genug verstanden. Genug gehört.<br><em>Jetzt wird trainiert.</em></h2>
   </div>
 </section>
 
 <!-- QUALIFIKATION -->
 <section class="qual">
   <div class="container">
-    <span class="eyebrow eyebrow--muted">Für wen ist unser Gefühlstraining?</span>
+    <span class="eyebrow eyebrow--muted">Für wen ist das Gefühlstraining?</span>
     <h2>Du bist <em>richtig hier,</em> wenn du…</h2>
     <ul class="qual-list">
-      <li>…weißt, dass da mehr in dir sein könnte — aber nicht weißt, wie du dahin kommst.</li>
-      <li>…viel verstehst über dich selbst, aber trotzdem das Gefühl hast: irgendetwas kommt nicht wirklich an.</li>
-      <li>…Gefühle eher wegmachst als sie wirklich durchzulassen — weil du nicht weißt, wie das geht.</li>
-      <li>…dich nach echtem Ankommen sehnst. Nicht nach noch einer Erklärung.</li>
-      <li>…neugierig bist, wie es sich anfühlt, wirklich bei dir zu sein.</li>
+      <li>…dich zeigen willst und dich die Angst vor der Meinung anderer bremst.</li>
+      <li>…Nein sagen willst und doch wieder Ja sagst.</li>
+      <li>…die Starke spielst, obwohl dir nicht danach ist.</li>
+      <li>…nicht ins Tun kommst oder keine Pause machen kannst.</li>
+      <li>…schon viel über dich verstanden hast und trotzdem am gleichen Punkt landest.</li>
     </ul>
     <div class="qual-promise">
-      In 10 Minuten machst du eine Erfahrung, die du mit keinem Buch und keinem Podcast machen kannst. Du spürst, was emotionale Kapazität bedeutet — im Körper.
+      In 10 Minuten machst du eine Erfahrung, die dir kein Buch und kein Podcast geben kann: Du spürst, wie es ist, ein Gefühl im Körper zu halten.
     </div>
   </div>
 </section>
@@ -297,8 +300,8 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
 <!-- MUSTER-UNTERBRECHUNG -->
 <section class="muster">
   <div class="container">
-    <h2>Wissen verändert nichts,<br>solange der Körper<br><em>nicht mitmacht.</em></h2>
-    <p>Diese Session setzt genau dort an — nicht im Kopf, sondern dort, wo Gefühle wirklich leben.</p>
+    <h2>Du trainierst deinen Körper.<br><em>Wir deine Gefühle.</em></h2>
+    <p>Verstehen allein ändert wenig. Darum setzt dieses Training im Körper an, dort, wo du Gefühle spürst.</p>
   </div>
 </section>
 
@@ -307,63 +310,69 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
   <div class="container">
     <div class="gewinn-header">
       <span class="eyebrow eyebrow--muted">Was du mitnimmst</span>
-      <h2>Was du aus dieser Session <em>bekommst</em></h2>
+      <h2>Was du aus diesen 10 Minuten <em>mitnimmst</em></h2>
     </div>
     <div class="gewinn-list">
       <div class="gewinn-item">
         <span class="gewinn-sym">&#8767;</span>
         <div>
           <h3>Kontakt zu deinem Körper</h3>
-          <p>Du lernst, dorthin zu gehen, wo Gefühle wirklich sind: in den Körper, nicht in den Kopf.</p>
+          <p>Du spürst, wo ein Gefühl in deinem Körper sitzt, statt nur darüber nachzudenken.</p>
         </div>
       </div>
       <div class="gewinn-item">
         <span class="gewinn-sym">&#9675;</span>
         <div>
-          <h3>Deine erste Erfahrung mit echtem Fühlen</h3>
-          <p>Nicht als Konzept, sondern als etwas, das du spürst. Das ist ein Unterschied, den du nicht vergisst.</p>
+          <h3>Deine erste Trainingseinheit</h3>
+          <p>Du hältst ein Gefühl für einen Moment, sicher und in deinem Tempo. So fängt Training an.</p>
         </div>
       </div>
       <div class="gewinn-item">
         <span class="gewinn-sym">&#9632;</span>
         <div>
-          <h3>Emotionale Kapazität, die sich sofort anfühlt</h3>
-          <p>Du erlebst, wie es ist, bei einem Gefühl zu bleiben, ohne darin zu versinken. Das ist Freiheit.</p>
+          <h3>Bei einem Gefühl bleiben, ohne darin zu versinken</h3>
+          <p>Du erlebst, wie viel Ruhe darin liegt. Was du fühlen kannst, kannst du leben.</p>
         </div>
       </div>
       <div class="gewinn-item">
         <span class="gewinn-sym">&#8635;</span>
         <div>
-          <h3>Den Anfang von etwas</h3>
-          <p>Diese 10 Minuten sind kein Ziel. Sie sind der erste Schritt zu einem Leben, das sich nach dir anfühlt.</p>
+          <h3>Den Anfang von mehr Leben</h3>
+          <p>Diese 10 Minuten sind dein Einstieg. Wenn du weitertrainieren willst, wartet das <a href="emotions-gym.html" style="color:inherit;text-decoration:underline;">Emotions-Gym</a> auf dich.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<div class="photo-strip" style="--cols:3">
+  <figure><img src="img/foto-alexandra-gras-kopfhoerer.jpg" alt="Alexandra liegt mit Kopfhörern entspannt im Gras" loading="lazy" width="732" height="1100"/><figcaption>Kopfhörer auf.</figcaption></figure>
+  <figure><img src="img/foto-alexandra-meditation.jpg" alt="Alexandra sitzt ruhig im Gras unter einem Olivenbaum" loading="lazy" width="732" height="1100"/><figcaption>Hinsetzen.</figcaption></figure>
+  <figure><img src="img/foto-julia-meer-arme.jpg" alt="Julia steht im Meer und breitet die Arme aus" loading="lazy" width="732" height="1100"/><figcaption>Spüren.</figcaption></figure>
+</div>
+
 <!-- METHODE -->
 <section class="methode">
   <div class="container-wide">
     <div class="methode-header container">
-      <span class="eyebrow eyebrow--muted">Neurowissenschaftlich fundiert</span>
-      <h2>10 Minuten <em>Erfahrung</em></h2>
+      <span class="eyebrow eyebrow--muted">So läuft das Training ab</span>
+      <h2>10 Minuten, <em>drei Schritte</em></h2>
     </div>
     <div class="methode-grid container">
       <div class="methode-card">
         <span class="methode-card-sym">&#8767;</span>
         <h3>Körperarbeit</h3>
-        <p>Atemarbeit aktiviert den Vagusnerv — den Zustand von Sicherheit und Verbindung. Dein Nervensystem kommt aus dem Autopiloten. Du wirst präsent.</p>
+        <p>Mit dem Atem kommst du in deinem Körper an. Du wirst ruhig und präsent.</p>
       </div>
       <div class="methode-card">
         <span class="methode-card-sym">&#9835;</span>
-        <h3>Zugang zum Unterbewusstsein</h3>
-        <p>Binaural Beats bringen dein Gehirn in den Zustand zwischen Wachheit und Schlaf. Der innere Kritiker tritt zurück. Das Unterbewusstsein wird zugänglich.</p>
+        <h3>Tiefe Entspannung</h3>
+        <p>Musik mit Binaural Beats hilft dir, tief zu entspannen. Der innere Kritiker wird leiser.</p>
       </div>
       <div class="methode-card">
         <span class="methode-card-sym">&#9680;</span>
-        <h3>Geführte Hypnose &amp; Fühlen</h3>
-        <p>In diesem Zustand kannst du ein Gefühl wirklich fühlen — sicher, gehalten, in deinem Tempo. Neue neuronale Bahnen entstehen. Somatische Arbeit auf tiefster Ebene.</p>
+        <h3>Arbeit mit deinem Unterbewusstsein</h3>
+        <p>Über geführte Hypnose sprichst du dein Unterbewusstsein an. So findest du leichter Zugang zu deinen Gefühlen und kannst sie halten, sicher und in deinem Tempo.</p>
       </div>
     </div>
     <p style="text-align:center;margin-top:40px;font-size:0.9rem;color:var(--muted);">&#9904; Kopfhörer empfohlen für die volle Wirkung der Binaural Beats.</p>
@@ -381,17 +390,17 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
       <div class="vn-col before">
         <h3>Vorher</h3>
         <ul>
-          <li>Du weißt viel über dich — und trotzdem dreht sich der Kopf nachts weiter.</li>
+          <li>Du weißt viel über dich, und trotzdem dreht sich der Kopf nachts weiter.</li>
           <li>Du funktionierst, lieferst, bist für alle da. Und für dich selbst bleibt nichts mehr übrig.</li>
-          <li>Du machst Gefühle weg, bevor sie dich erwischen — weil du nicht weißt, wo es aufhört.</li>
-          <li>Deine Gefühle steuern dich, ohne dass du es merkst — du erzielst immer wieder Resultate, die du nicht willst, und sitzt nie wirklich am Steuer deines Lebens.</li>
+          <li>Du machst Gefühle weg, bevor sie dich erwischen, weil du nicht weißt, wo es aufhört.</li>
+          <li>Deine Gefühle steuern dich, ohne dass du es merkst. Du erzielst immer wieder Resultate, die du nicht willst, und sitzt nie wirklich am Steuer deines Lebens.</li>
         </ul>
       </div>
       <div class="vn-col after">
         <h3>Nachher</h3>
         <ul>
-          <li>Du kannst bei einem Gefühl bleiben — ohne darin zu versinken. Das ist der Unterschied zwischen Reagieren und Fühlen.</li>
-          <li>Du gehst durch den Tag — und bist wirklich dabei. Präsent. Bei dir.</li>
+          <li>Du kannst bei einem Gefühl bleiben, ohne darin zu versinken. Das ist der Unterschied zwischen Reagieren und Fühlen.</li>
+          <li>Du gehst durch den Tag und bist wirklich dabei. Präsent. Bei dir.</li>
           <li>Du weißt, wie es sich anfühlt, wirklich bei dir zu sein. Und du willst mehr davon.</li>
         </ul>
       </div>
@@ -409,10 +418,10 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
       <div>
         <span class="eyebrow eyebrow--muted">Über uns</span>
         <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:28px;">Wir sind Julia &amp; <em style="color:var(--gold);">Alexandra.</em></h2>
-        <p style="margin-bottom:18px;">Zwei Frauen, zwei Generationen, ein gemeinsamer Antrieb: Wir wollen Menschen begleiten — dahin, wo sie längst sein wollten. Mit allem, was wir gelernt, gelebt und manchmal auch schmerzhaft erfahren haben.</p>
-        <p style="margin-bottom:18px;">Wir glauben nicht an perfekte Pläne, sondern an ehrliche Schritte. Nicht an Methoden-Dogmen, sondern an das, was wirklich wirkt: Körper spüren. Gefühle halten. Anfangen, bevor man sich bereit fühlt. Und dranbleiben, wenn es schwer wird.</p>
-        <p style="margin-bottom:32px;">Radical Sparks ist das, was entsteht, wenn man aufhört, sich selbst zu belügen — und anfängt, wirklich zu leben.</p>
-        <p style="font-family:var(--script);font-size:1.3rem;color:var(--muted);">— Julia &amp; Alexandra</p>
+        <p style="margin-bottom:18px;">Zwei Frauen, zwei Generationen, ein Antrieb: Wir haben beide lange viel über uns verstanden und trotzdem nicht so gelebt, wie wir wollten. Erst als wir angefangen haben, unsere Gefühle zu trainieren, hat sich das geändert.</p>
+        <p style="margin-bottom:18px;">Daraus ist Radical Sparks entstanden, das Gym für emotionale Kapazität. Mit Selbstreflexion, Bewegung, Hypnose und Gemeinschaft trainierst du Schritt für Schritt, deine Gefühle zu halten und ins Handeln zu kommen.</p>
+        <p style="margin-bottom:32px;">Hol dir deinen Spark zurück.</p>
+        <p style="font-family:var(--script);font-size:1.3rem;color:var(--muted);">Julia &amp; Alexandra</p>
       </div>
     </div>
   </div>
@@ -423,7 +432,7 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
   <div class="container">
     <span class="eyebrow eyebrow--gold">Gratis · Sofort verfügbar</span>
     <h2 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:16px;">Jetzt <em style="color:var(--gold);">anhören</em></h2>
-    <p style="color:rgba(255,255,255,.72);max-width:460px;margin:0 auto 40px;">Trag dich ein — du bekommst den Link zur Session sofort per E-Mail.</p>
+    <p style="color:rgba(255,255,255,.72);max-width:460px;margin:0 auto 40px;">Trag dich ein, dann bekommst du den Link zur Session sofort per E-Mail.</p>
     <form id="form-session" onsubmit="submitBrevoForm(event)" style="max-width:480px;margin:0 auto 16px;text-align:left;">
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;">
         <input type="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email"
@@ -444,10 +453,10 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
     </form>
     <div id="success-session" style="display:none;background:rgba(255,255,255,.08);border-radius:6px;padding:24px;max-width:480px;margin:0 auto;text-align:center;">
       <p style="color:#ffde59;font-weight:600;margin:0 0 6px;">✓ Fast geschafft!</p>
-      <p style="color:rgba(255,255,255,.75);margin:0;font-size:15px;">Schau in dein Postfach und klicke auf den Bestätigungslink — dann bekommst du sofort deinen Zugang.</p>
+      <p style="color:rgba(255,255,255,.75);margin:0;font-size:15px;">Schau in dein Postfach und klicke auf den Bestätigungslink, dann bekommst du sofort deinen Zugang.</p>
     </div>
     <div id="error-session" style="display:none;background:rgba(180,40,40,.15);border-radius:4px;padding:14px;max-width:480px;margin:8px auto 0;">
-      <p style="color:#ffaaaa;margin:0;font-size:14px;">Etwas ist schiefgelaufen — bitte versuch es gleich nochmal.</p>
+      <p style="color:#ffaaaa;margin:0;font-size:14px;">Etwas ist schiefgelaufen. Bitte versuch es gleich nochmal.</p>
     </div>
     <p style="font-size:13px;color:rgba(255,255,255,.38);margin-top:16px;">&#9904; Kopfhörer empfohlen. Kein Spam. Jederzeit abmeldbar.</p>
     <script>
@@ -484,7 +493,7 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
     <div class="footer-top">
       <div class="footer-logo">
         <img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/>
-        <div class="footer-tagline">Das Fitnessstudio für emotionale Kapazität.</div>
+        <div class="footer-tagline">Das Gym für emotionale Kapazität.<br/>Was du fühlen kannst, kannst du leben.<br/>Hol dir deinen Spark zurück.</div>
         <div class="footer-social">
           <a href="https://www.instagram.com/radicalsparks/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153.5.5.888 1.11 1.153 1.772.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg></a>
           <a href="https://www.facebook.com/radicalsparks.official/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/></svg></a>
@@ -492,10 +501,10 @@ footer.site .wrap{padding:0 28px;max-width:var(--maxw);margin:0 auto;}
         </div>
       </div>
       <ul class="footer-links">
-        <li><a href="emotionstraining.html">Online Kurs Emotionstraining</a></li>
+        <li><a href="emotions-gym.html">Emotions-Gym</a></li>
+        <li><a href="kostenloses-gefuehlstraining.html">Kostenloses Gefühlstraining</a></li>
         <li><a href="ueber-uns.html">Über uns</a></li>
         <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="kostenloses-gefuehlstraining.html">Kostenloses Gefühlstraining</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
         <li><a href="/agb">AGB</a></li>
