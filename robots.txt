@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /.netlify/
 
 # AI / GEO crawlers - explicitly allowed
 User-agent: GPTBot

@@ -849,7 +849,7 @@ function rsRenderCard(card){
   card.querySelector('[data-slot=per]').textContent = (rsTerm === '12' ? 'Das sind ' : 'Das sind rund ') + rsEur(p.monthly) + ' im Monat.';
   var fs = card.querySelector('[data-slot=pay]');
   fs.innerHTML = rsPayOptions(p, rsTerm).map(function(o, i){
-    return '<label class="pay-option"><input type="radio" name="pay-' + plan + '" value="' + o[0] + '"' + (i === 0 ? ' checked' : '') + '/><span>' + o[1] + '</span><span class="amt">' + o[2] + '</span></label>';
+    return '<label class="pay-option"><input type="radio" name="pay-' + plan + '" value="' + o[0] + '"' + (i === 0 ? ' checked' : '') + '><' + 'span>' + o[1] + '</span><span class="amt">' + o[2] + '</span></label>';
   }).join('');
   fs.querySelectorAll('input').forEach(function(r){ r.addEventListener('change', function(){ rsSyncCta(card); }); });
   rsSyncCta(card);
