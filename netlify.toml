@@ -125,3 +125,9 @@
   from = "/emotionstrainingRadical"
   to = "/emotions-gym"
   status = 301
+
+# Freebie-Landingpage (kurzer Link für ManyChat/Instagram)
+[[redirects]]
+  from = "/reset"
+  to = "/nervensystem-reset.html"
+  status = 301

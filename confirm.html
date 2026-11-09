@@ -67,6 +67,14 @@
     <a href="index.html" class="btn">Zur Startseite →</a>
   </div>
 
+  <!-- Erfolg Newsletter + Freebie -->
+  <div id="state-freebie" class="card" style="display:none;">
+    <span class="icon">✓</span>
+    <h1>Bestätigt!<br><em>dein Nervensystem Reset ist da.</em></h1>
+    <p>Schön, dass du dabei bist. Dein Freebie kannst du hier direkt herunterladen. Wir haben es dir außerdem per E-Mail geschickt.</p>
+    <a href="downloads/nervensystem-reset.pdf" class="btn btn-gold" target="_blank" rel="noopener">Freebie herunterladen</a>
+  </div>
+
   <!-- Fehler -->
   <div id="state-error" class="card" style="display:none;">
     <span class="icon">✗</span>
@@ -80,7 +88,7 @@
 
 <script>
 function show(id) {
-  ['state-loading','state-waitlist','state-session','state-webinar','state-error'].forEach(function(s) {
+  ['state-loading','state-waitlist','state-session','state-webinar','state-freebie','state-error'].forEach(function(s) {
     document.getElementById(s).style.display = s === id ? 'block' : 'none';
   });
 }
@@ -92,7 +100,25 @@ const RS_WEBINAR_WELCOME_TEMPLATE_ID = 20;
   const params = new URLSearchParams(window.location.search);
   const eEnc = params.get('e');
   const listId = parseInt(params.get('l'), 10);
-  const flow = params.get('s'); // '1' = Gefühlstraining, '2' = Webinar, sonst Warteliste
+  const flow = params.get('s'); // '1' = Gefühlstraining, '2' = Webinar, '3' = Newsletter + Freebie, sonst Warteliste
+
+  if (flow === '3') {
+    let nlEmail = '';
+    try { nlEmail = atob(eEnc || ''); } catch(e) {}
+    if (!nlEmail.includes('@')) { show('state-error'); return; }
+    try {
+      const r = await fetch('/.netlify/functions/brevo', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ action: 'newsletterConfirm', email: nlEmail, token: params.get('t') || '' })
+      });
+      if (!r.ok) throw new Error(r.status);
+      show('state-freebie');
+      if (typeof fbq === 'function') { fbq('track', 'CompleteRegistration', { content_name: 'Freebie Nervensystem Reset' }); }
+      if (typeof gtag === 'function') { gtag('event', 'sign_up', { method: 'newsletter_freebie', source: params.get('src') || '' }); }
+    } catch(err) { show('state-error'); }
+    return;
+  }
 
   if (!eEnc || !listId) { show('state-error'); return; }
 
