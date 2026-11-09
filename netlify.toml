@@ -131,3 +131,8 @@
   from = "/reset"
   to = "/nervensystem-reset.html"
   status = 301
+
+[[redirects]]
+  from = "/test"
+  to = "/fitness-check.html"
+  status = 301
