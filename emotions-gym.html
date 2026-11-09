@@ -376,7 +376,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
       <ul class="facts">
         <li>3 oder 12 Monate</li>
         <li>Ratenzahlung ohne Aufschlag</li>
-        <li>3 Tage kostenlos testen</li>
+        <li>1 Monat kostenlos testen</li>
         <li>von zu Hause aus</li>
       </ul>
     </div>
@@ -643,12 +643,12 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     <div class="trial" id="testen">
       <div>
         <span class="eyebrow">Ohne Risiko</span>
-        <h3>3 Tage testen. <em>Ohne Risiko.</em></h3>
-        <p>Du holst dir deinen Zugang, öffnest den Mitgliederbereich und trainierst 3 Tage lang, wie du willst. Eingangscheck, erstes Warm-up, die erste Trainingseinheit. Danach weißt du, ob das Emotions-Gym zu dir passt.</p>
+        <h3>1 Monat testen. <em>Ohne Risiko.</em></h3>
+        <p>Du holst dir deinen Zugang, öffnest den Mitgliederbereich und trainierst einen Monat lang, wie du willst. Eingangscheck, erstes Warm-up, die erste Trainingseinheit. Danach weißt du, ob das Emotions-Gym zu dir passt.</p>
       </div>
       <ul class="check-list">
         <li><span><strong>Heute 0 €.</strong> Die erste Zahlung wird erst nach deinen 3 Testtagen fällig.</span></li>
-        <li><span><strong>Passt es nicht?</strong> Kündige innerhalb der 3 Tage über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>. Es wird nichts abgebucht, ohne Begründung, ohne Rückfrage.</span></li>
+        <li><span><strong>Passt es nicht?</strong> Kündige innerhalb des ersten Monats über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>. Es wird nichts abgebucht, ohne Begründung, ohne Rückfrage.</span></li>
         <li><span><strong>Passt es?</strong> Dann trainierst du einfach weiter. Ab Tag 4 beginnt deine Mitgliedschaft mit der gewählten Laufzeit.</span></li>
       </ul>
     </div>
@@ -668,7 +668,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
       <div>
         <span class="eyebrow" style="margin-bottom:6px;">Jetzt starten</span>
         <h3 style="margin:0;">Deine Mitgliedschaft im Emotions-Gym</h3>
-        <p class="muted" style="margin:6px 0 0;">Heute 0 € · 3 Tage kostenlos testen · danach ab 37,50 € im Monat</p>
+        <p class="muted" style="margin:6px 0 0;">Heute 0 € · 1 Monat kostenlos testen · danach ab 37,50 € im Monat</p>
       </div>
       <a href="#preise" class="btn btn-primary">Mitgliedschaft wählen</a>
     </div>
@@ -739,7 +739,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
     <span class="eyebrow">FAQ</span>
     <h2>Bevor du startest: <em>die häufigsten Fragen.</em></h2>
     <details class="faq-item" open><summary>Gibt es auch eine Monatsmitgliedschaft?</summary><p>Nein. Es braucht ein Minimum an Training, damit du Ergebnisse siehst, genau wie im Gym. Deshalb startest du mit mindestens 3 Monaten. Du kannst aber monatlich in Raten zahlen, ohne Aufschlag.</p></details>
-    <details class="faq-item"><summary>Kann ich das Emotions-Gym erst testen?</summary><p>Ja. Die ersten 3 Tage sind kostenlos, die erste Zahlung wird erst danach fällig. Wenn es nicht passt, kündigst du innerhalb der 3 Tage über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>, und es wird nichts abgebucht.</p></details>
+    <details class="faq-item"><summary>Kann ich das Emotions-Gym erst testen?</summary><p>Ja. Der erste Monat ist kostenlos, die erste Zahlung wird erst danach fällig. Wenn es nicht passt, kündigst du innerhalb des ersten Monats über <a href="/kuendigen" class="textlink">Verträge hier kündigen</a>, und es wird nichts abgebucht.</p></details>
     <details class="faq-item"><summary>Wie viel Zeit brauche ich? Ich habe nicht viel Zeit.</summary><p>Die Mindestdosis sind 7 Minuten am Tag: das tägliche Warm-up. Den Trainingsplan machst du in deinem Tempo. Regelmäßigkeit wirkt mehr als viele Einheiten am Stück.</p></details>
     <details class="faq-item"><summary>Ich habe schon so viel gemacht. Warum jetzt noch das?</summary><p>Genau deshalb. Im Emotions-Gym geht es nicht mehr ums Verstehen, sondern ums Trainieren und Umsetzen. Du sammelst neue Erfahrungen, statt noch mehr Wissen.</p></details>
     <details class="faq-item"><summary>Ich mache gerade Coaching oder Therapie. Passt das zusammen?</summary><p>Ja. Ein Coach oder Therapeut kann dich nicht jeden Tag begleiten, das Gym schon. Das eine ersetzt das andere nicht, es ergänzt es.</p></details>
@@ -818,7 +818,7 @@ function rsAcceptCookies(){ try { localStorage.setItem('rs_cookie_consent','acce
 function rsDeclineCookies(){ try { localStorage.setItem('rs_cookie_consent','declined'); } catch(e) {} document.getElementById('rs-cookie-banner').style.display = 'none'; }
 
 // ---- Preise (Originalpreise, Stripe) ----
-// Stripe-Zahlungslinks zu den Originalpreisen (live, mit 3 Tagen Testphase).
+// Stripe-Zahlungslinks zu den Originalpreisen (live, mit 30 Tagen Testphase).
 // Fehlt ein Link (null), öffnet der Button eine vorausgefüllte E-Mail.
 var RS_PRICES = {
   gym: { name: 'Emotions-Gym',
