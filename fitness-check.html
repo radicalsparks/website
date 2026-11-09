@@ -305,7 +305,26 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
 .fc-placeholder strong{display:block;color:var(--orange);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
 .fc-hint{font-size:13px;color:var(--text-dim);margin:18px 0 0}
 .lp-about img{width:100%;height:auto;border-radius:14px;display:block}
-@media(max-width:900px){@media(max-width:680px){</style>
+@media(max-width:900px){.fc-areas{grid-template-columns:1fr 1fr}.fc-hero .grid-2{gap:44px}}
+@media(max-width:680px){.fc-steps,.fc-areas{grid-template-columns:1fr}.fc-hero{padding:36px 0 64px}.fc-badge{left:50%;transform:translateX(-50%) rotate(-3deg);bottom:-16px}}
+@media (min-width:901px){
+  .fc-hero{padding:24px 0 32px;min-height:calc(100svh - 80px);display:flex;align-items:center}
+  .fc-hero>.wrap{width:100%}
+  .fc-hero .grid-2{grid-template-columns:1.1fr .9fr;gap:48px!important}
+  .fc-hero h1{font-size:clamp(34px,3.4vw,48px);margin-bottom:12px}
+  .fc-hero .eyebrow{margin-bottom:10px}
+  .fc-wishes{font-size:clamp(17px,1.5vw,20px);margin-bottom:12px}
+  .fc-hero .lede{font-size:16.5px;margin-bottom:20px!important}
+  .fc-hero .btn{padding:15px 28px}
+  .fc-hero .fc-hint{margin-top:12px}
+  .fc-photo img{max-height:calc(100svh - 150px);object-fit:cover}
+}
+@media (min-width:901px) and (max-height:760px){
+  .fc-hero h1{font-size:clamp(30px,2.8vw,38px)}
+  .fc-wishes{font-size:16.5px}
+  .fc-hero .lede{font-size:15.5px;line-height:1.6}
+}
+</style>
 </head>
 <body>
 <header class="site">
