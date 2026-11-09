@@ -9,7 +9,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Newsletter + Freebie "Nervensystem Reset" (Double-Opt-in)
 // NEWSLETTER_LIST_ID: ID der Brevo-Liste "Newsletter" eintragen, sobald die Liste angelegt ist.
-const NEWSLETTER_LIST_ID = null;
+const NEWSLETTER_LIST_ID = 13; // "Radical Sparks – Newsletter"
 const NL_DOI_TEMPLATE_ID = 39;      // "RS – Newsletter + Freebie: Anmeldung bestätigen (DOI)"
 const NL_WELCOME_TEMPLATE_ID = 40;  // "RS – Newsletter + Freebie: Willkommen mit Nervensystem Reset"
 const ALLOWED_HOST_RE = /^(www\.radical-sparks\.com|deploy-preview-\d+--radical-sparks\.netlify\.app)$/;
