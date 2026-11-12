@@ -324,13 +324,32 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
   .fc-wishes{font-size:16.5px}
   .fc-hero .lede{font-size:15.5px;line-height:1.6}
 }
+.fc-start [hidden]{display:none!important}
+.fc-progress{display:flex;align-items:center;gap:14px;margin-bottom:26px;font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.fc-bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}.fc-bar i{display:block;height:100%;width:10%;background:var(--yellow);transition:width .3s}
+.fc-q{font-size:clamp(20px,2.4vw,26px);line-height:1.35;margin:0 0 22px;text-align:left}
+.fc-opts{display:grid;gap:12px;text-align:left}
+.fc-opt{display:block;width:100%;text-align:left;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:16px 20px;color:var(--text);font:inherit;font-size:16px;line-height:1.5;cursor:pointer;transition:border-color .15s,background .15s}
+.fc-opt:hover,.fc-opt:focus-visible{border-color:var(--yellow);outline:none}.fc-opt.sel{border-color:var(--yellow);background:rgba(255,222,89,.1)}
+.fc-back{background:none;border:0;color:var(--text-dim);font:inherit;font-size:14px;margin-top:18px;cursor:pointer;text-decoration:underline}
+.fc-row{display:flex;gap:10px;flex-wrap:wrap;max-width:560px;margin:0 auto}
+.fc-row input{flex:1 1 220px;min-width:0;padding:15px 18px;background:var(--bg);border:1.5px solid var(--line);border-radius:6px;color:var(--text);font:inherit;font-size:16px;outline:none}
+.fc-row input:focus{border-color:var(--yellow)}
+.fc-consent{display:flex;gap:10px;align-items:flex-start;text-align:left;max-width:560px;margin:14px auto 0;font-size:13px;line-height:1.55;color:var(--text-dim);cursor:pointer}
+.fc-consent input{flex-shrink:0;width:17px;height:17px;margin-top:2px;accent-color:#ffde59}.fc-consent a{color:var(--yellow)}
+.fc-err{color:#ffc4c4;font-size:14px;margin:12px 0 0}
+.fc-result{text-align:left}.fc-result h2{text-align:left}.fc-result .claim{font-size:20px;font-weight:700;color:var(--text);line-height:1.45;margin:0 0 20px}
+.fc-result h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:24px 0 6px}
+.fc-result p{margin:0 0 12px}.fc-result .kennst{background:var(--bg);border-left:4px solid var(--yellow);border-radius:8px;padding:18px 22px;margin:22px 0}
+.fc-next{background:var(--bg);border:2px solid var(--yellow);border-radius:14px;padding:26px 26px 28px;margin-top:28px}
+.fc-wert{font-size:14px;color:var(--text-dim);margin-top:22px}
 </style>
 </head>
 <body>
 <header class="site">
   <div class="nav">
     <a class="nav-logo" href="index.html"><img src="logo-radical-sparks-icon.png" alt="Radical Sparks"/></a>
-    <div class="nav-cta" style="display:block;margin-left:auto;"><a href="#check" class="btn btn-primary">Check starten</a></div>
+    <div class="nav-cta" style="display:block;margin-left:auto;"><a href="#check" class="btn btn-primary" data-fc-start>Check starten</a></div>
   </div>
 </header>
 <main>
@@ -342,7 +361,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
         <h1>Wie holst du dir deinen <em>Spark</em> zurück?</h1>
         <p class="fc-wishes">Zeit für dich. Eine Beziehung mit echter Nähe. Der Traum, den du schon so lange in dir trägst. Du kannst all das leben.</p>
         <p class="lede" style="margin-bottom:26px;">Vielleicht bist du gerade vor allem für andere da und funktionierst. Und trotzdem meldet sich in dir längst etwas, das mehr will. Ob du schon genau weißt, was, oder es gerade erst spürst: Dieser Check zeigt dir, wo du stehst und welcher Schritt dich jetzt zu deinem Spark zurückbringt.</p>
-        <div class="btn-row"><a href="#check" class="btn btn-primary">Check starten</a></div>
+        <div class="btn-row"><a href="#check" class="btn btn-primary" data-fc-start>Check starten</a></div>
         <p class="fc-hint" style="color:var(--text-mid);font-size:15px;">10 Fragen, 3 Minuten. Dein Ergebnis bekommst du per Mail, dazu eine Einladung zum kostenlosen Probemonat im Emotions-Gym.</p>
       </div>
       <div class="fc-photo">
@@ -406,11 +425,35 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
 
 <section id="check" class="section-alt">
   <div class="wrap">
-    <div class="fc-start">
-      <span class="eyebrow">Kostenloser Fitness-Check</span>
-      <h2>Bereit? <em>Dein Spark wartet.</em></h2>
-      <p class="lede" style="margin:0 auto;">10 Fragen, 3 Minuten. Dein Ergebnis bekommst du per Mail, dazu eine Einladung zum kostenlosen Probemonat im Emotions-Gym.</p>
-      <div class="fc-placeholder"><strong>Platzhalter</strong>Hier startet der Check. Die Fragen und die Mail-Anmeldung baue ich im nächsten Schritt ein.</div>
+    <div class="fc-start" id="fc-app">
+      <div class="fc-view" id="fc-intro">
+        <span class="eyebrow">Kostenloser Fitness-Check</span>
+        <h2>Bereit? <em>Dein Spark wartet.</em></h2>
+        <p class="lede" style="margin:0 auto 26px;">10 Fragen, 3 Minuten. Dein Ergebnis bekommst du per Mail, dazu eine Einladung zum kostenlosen Probemonat im Emotions-Gym.</p>
+        <button type="button" class="btn btn-primary" data-fc-start>Check starten</button>
+      </div>
+      <div class="fc-view" id="fc-quiz" hidden>
+        <div class="fc-progress"><span id="fc-count">Frage 1 von 10</span><div class="fc-bar"><i id="fc-bar"></i></div></div>
+        <h3 class="fc-q" id="fc-q"></h3>
+        <div class="fc-opts" id="fc-opts"></div>
+        <button type="button" class="fc-back" id="fc-back">Zurück</button>
+      </div>
+      <div class="fc-view" id="fc-mail" hidden>
+        <span class="eyebrow">Geschafft!</span>
+        <h2>Wohin dürfen wir dir <em>dein Ergebnis</em> schicken?</h2>
+        <p class="lede" style="margin:0 auto 24px;">Du bekommst gleich eine Mail. Ein Klick zum Bestätigen, dann siehst du dein Ergebnis und welcher Schritt dich jetzt zu deinem Spark zurückbringt.</p>
+        <form id="fc-form" novalidate>
+          <div class="fc-row"><input type="email" id="fc-email" placeholder="Deine E-Mail-Adresse" required autocomplete="email" aria-label="E-Mail-Adresse"/><button type="submit" class="btn btn-primary" id="fc-submit">Ergebnis anfordern</button></div>
+          <label class="fc-consent"><input type="checkbox" id="fc-ok" required/><span>Ja, ich möchte mein Fitness-Check-Ergebnis und den Radical-Sparks-Newsletter per E-Mail bekommen. Die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> habe ich gelesen. Abmelden geht jederzeit.</span></label>
+          <p class="fc-err" id="fc-err" hidden>Das hat leider nicht geklappt. Bitte prüf deine Adresse und versuch es nochmal.</p>
+        </form>
+      </div>
+      <div class="fc-view" id="fc-sent" hidden>
+        <span class="eyebrow">Fast geschafft</span>
+        <h2>Schau in dein <em>Postfach.</em></h2>
+        <p class="lede" style="margin:0 auto;">Wir haben dir eine Mail geschickt. Bestätige deine Adresse mit einem Klick, dann kommt dein Ergebnis direkt zu dir. Nichts da? Schau kurz im Spam-Ordner nach.</p>
+      </div>
+      <div class="fc-view fc-result" id="fc-result" hidden></div>
       <p class="fc-hint">Der Fitness-Check ist eine Selbsteinschätzung und keine Diagnose. Er ersetzt keine therapeutische oder medizinische Beratung.</p>
     </div>
   </div>
@@ -457,5 +500,7 @@ footer.site { background: var(--surface); border-top: 1px solid var(--line); pad
 function rsAcceptCookies(){ try { localStorage.setItem('rs_cookie_consent','accepted'); } catch(e) {} document.getElementById('rs-cookie-banner').style.display = 'none'; if (typeof rsLoadGA4 === 'function') rsLoadGA4(); if (typeof rsLoadMetaPixel === 'function') rsLoadMetaPixel(); }
 function rsDeclineCookies(){ try { localStorage.setItem('rs_cookie_consent','declined'); } catch(e) {} document.getElementById('rs-cookie-banner').style.display = 'none'; }
 </script>
+<script src="js/fitness-check-data.js"></script>
+<script src="js/fitness-check.js"></script>
 </body>
 </html>
