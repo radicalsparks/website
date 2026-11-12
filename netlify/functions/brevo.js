@@ -13,8 +13,8 @@ const NEWSLETTER_LIST_ID = 13; // "Radical Sparks – Newsletter"
 const NL_DOI_TEMPLATE_ID = 39;      // "RS – Newsletter + Freebie: Anmeldung bestätigen (DOI)"
 const NL_WELCOME_TEMPLATE_ID = 40;  // "RS – Newsletter + Freebie: Willkommen mit Nervensystem Reset"
 // Fitness-Check "Wie holst du dir deinen Spark zurück?" (Double-Opt-in, Ergebnis per Mail)
-const FC_DOI_TEMPLATE_ID = 0;     // "RS – Fitness-Check: Anmeldung bestätigen (DOI)"
-const FC_RESULT_TEMPLATE_ID = 0;  // "RS – Fitness-Check: Ergebnis"
+const FC_DOI_TEMPLATE_ID = 43;    // "RS – Fitness-Check: Anmeldung bestätigen (DOI)"
+const FC_RESULT_TEMPLATE_ID = 44; // "RS – Fitness-Check: Ergebnis"
 const FC_TYPES = { 1: 'Klarheit finden', 2: 'Den ersten Schritt gehen', 3: 'Dranbleiben trainieren', 4: 'Leichtigkeit trainieren' };
 const FC_ANSWERS_RE = /^[1-4]{10}$/;
 function fcToken(email, answers, secret) {
