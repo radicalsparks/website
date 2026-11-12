@@ -12,6 +12,21 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const NEWSLETTER_LIST_ID = 13; // "Radical Sparks – Newsletter"
 const NL_DOI_TEMPLATE_ID = 39;      // "RS – Newsletter + Freebie: Anmeldung bestätigen (DOI)"
 const NL_WELCOME_TEMPLATE_ID = 40;  // "RS – Newsletter + Freebie: Willkommen mit Nervensystem Reset"
+// Fitness-Check "Wie holst du dir deinen Spark zurück?" (Double-Opt-in, Ergebnis per Mail)
+const FC_DOI_TEMPLATE_ID = 43;    // "RS – Fitness-Check: Anmeldung bestätigen (DOI)"
+const FC_RESULT_TEMPLATE_ID = 44; // "RS – Fitness-Check: Ergebnis"
+const FC_TYPES = { 1: 'Klarheit finden', 2: 'Den ersten Schritt gehen', 3: 'Dranbleiben trainieren', 4: 'Leichtigkeit trainieren' };
+const FC_ANSWERS_RE = /^[1-4]{10}$/;
+function fcToken(email, answers, secret) {
+  return crypto.createHmac('sha256', secret).update('fc:' + email.toLowerCase() + ':' + answers).digest('hex').slice(0, 32);
+}
+function fcEvaluate(answers) {
+  const c = [0, 0, 0, 0, 0]; let sum = 0;
+  for (const ch of answers) { const v = Number(ch); c[v]++; sum += v; }
+  let best = 1;
+  for (let v = 2; v <= 4; v++) if (c[v] > c[best]) best = v; // Gleichstand: niedrigere Stufe
+  return { stufe: best, wert: Math.round(sum / answers.length * 10) / 10 };
+}
 const ALLOWED_HOST_RE = /^(www\.radical-sparks\.com|deploy-preview-\d+--radical-sparks\.netlify\.app)$/;
 const crypto = require('crypto');
 
@@ -132,6 +147,44 @@ exports.handler = async (event) => {
       }
       await brevoSend(BREVO_KEY, email, NL_WELCOME_TEMPLATE_ID);
       return { statusCode: 200, body: JSON.stringify({ ok: true }) };
+    }
+
+    if (action === 'checkOptin' || action === 'checkConfirm') {
+      if (!FC_DOI_TEMPLATE_ID || !FC_RESULT_TEMPLATE_ID) {
+        return { statusCode: 503, body: JSON.stringify({ error: 'Fitness-Check not configured' }) };
+      }
+      const answers = typeof data.answers === 'string' ? data.answers : '';
+      if (!FC_ANSWERS_RE.test(answers)) {
+        return { statusCode: 400, body: JSON.stringify({ error: 'Invalid answers' }) };
+      }
+      if (action === 'checkOptin') {
+        const host = String((event.headers && (event.headers['x-forwarded-host'] || event.headers.host)) || '').toLowerCase();
+        const base = ALLOWED_HOST_RE.test(host) ? 'https://' + host : 'https://www.radical-sparks.com';
+        const src = typeof data.source === 'string' ? data.source.replace(/[^a-z0-9-]/gi, '').slice(0, 20) : '';
+        const confirmUrl = base + '/confirm.html?s=4&e=' + encodeURIComponent(Buffer.from(email).toString('base64'))
+          + '&a=' + answers + '&t=' + fcToken(email, answers, BREVO_KEY) + (src ? '&src=' + src : '');
+        const ok = await brevoSend(BREVO_KEY, email, FC_DOI_TEMPLATE_ID, { confirmUrl: confirmUrl });
+        return ok ? { statusCode: 200, body: JSON.stringify({ ok: true }) }
+                  : { statusCode: 502, body: JSON.stringify({ error: 'Brevo error' }) };
+      }
+      const t = typeof data.token === 'string' ? data.token : '';
+      const expected = fcToken(email, answers, BREVO_KEY);
+      if (t.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(t), Buffer.from(expected))) {
+        return { statusCode: 403, body: JSON.stringify({ error: 'Invalid token' }) };
+      }
+      const r = fcEvaluate(answers);
+      const resp = await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: { 'api-key': BREVO_KEY, 'content-type': 'application/json' },
+        body: JSON.stringify({ email: email, listIds: [NEWSLETTER_LIST_ID], updateEnabled: true })
+      });
+      if (!resp.ok && resp.status !== 204) {
+        return { statusCode: 502, body: JSON.stringify({ error: 'Brevo error' }) };
+      }
+      await brevoSend(BREVO_KEY, email, FC_RESULT_TEMPLATE_ID, {
+        stufe: String(r.stufe), typ: FC_TYPES[r.stufe], wert: String(r.wert).replace('.', ',')
+      });
+      return { statusCode: 200, body: JSON.stringify({ ok: true, stufe: r.stufe, wert: r.wert }) };
     }
 
     return { statusCode: 400, body: JSON.stringify({ error: 'Unknown action' }) };
